@@ -6,33 +6,188 @@
   </head>
   <body>
 
-    <header class="header">
-      <nav class="container">
+    <!-- Header -->
 
-        <div class="navigation">
-          <ul class="navigation-links">
-            <li class="navigation-links__item"><a href="" class="navigation-links__link">Главная</a></li>
-            <li class="navigation-links__item"><a href="" class="navigation-links__link">О Седоне</a></li>
-            <li class="navigation-links__item"><a href="" class="navigation-links__link">Гостиницы</a></li>
-          </ul>
-        </div>
+    <header class="page-header">
+      <nav class="navigation">
 
-        <div class="activities">
-          <ul class="activities-buttons">
-            <li class="activities-buttons__item">
-              <a href="" class="activities-buttons__link"><img src="" alt="za__lupa" class="search_img"></a>
-            </li>
-            <li class="activities-buttons__item">
-              <a href="" class="activities-buttons__link"><img src="" alt="heart" class="heart_img"></a>
-            </li>
-            <li class="activities-buttons__item">
-              <a href="" class="btn">Хочу сюда!</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="navigation-links">
+          <li class="navigation-links__item"><a href="#" class="navigation-links__link">Главная</a></li>
+          <li class="navigation-links__item"><a href="#" class="navigation-links__link">О Седоне</a></li>
+          <li class="navigation-links__item"><a href="#" class="navigation-links__link">Гостиницы</a></li>
+        </ul>
+
+        <ul class="navigation-links clickable-links">
+          <li class="clickable-links__item">
+            <a href="#" class="clickable-links__link">
+              <span class="visually-hidden">Поиск</span>
+            </a>
+          </li>
+          <li class="clickable-links__item">
+            <a href="#" class="clickable-links__link">
+              <span class="visually-hidden">Избранные</span>
+            </a>
+          </li>
+          <li class="clickable-links__item">
+            <a href="#" class="button clickable-links__button">Хочу сюда!</a>
+          </li>
+        </ul>
 
       </nav>
     </header>
 
+    <!-- Main -->
+
+    <main class="main-index">
+
+      <!-- Hero -->
+      <section class="main-hero">
+        <div class="hero-images-wrapper">
+          <h1 class="visually-hidden">Городок Седона</h1>
+          <img src="" alt="" class="image-welcome-text">
+          <img src="" alt="" class="image-sup-welcome-text">
+          <img src="" alt="" class="image-sedona-text">
+        </div>
+        <div class="slogan-wrapper">
+          <h2 class="slogan-wrapper-headline">
+            Седона — небольшой городок в Аризоне, заслуживающий большего!
+          </h2>
+          <p class="text-wrapper-desk">
+            Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
+          </p>
+        </div>
+      </section>
+
+      <!-- Advantages -->
+      <!--
+        main: выстроить сетку на флексах с flex-wrap: wrap,
+        altarnate: сетка на гридах(квадратики напомнили гриды с тренажеров)
+      -->
+      <section class="advantages">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <ul class="advantages-list">
+          <li class="advantages-list__item">
+
+            <!-- Выразительнее dt и dd или h3 и p? -->
+
+            <dt class="advantages-list__item-title">Настоящий городок</dt>
+            <dd class="advantages-list__item-desc">
+              Седона — не аттракцион для туристов, там течёт своя жизнь
+            </dd>
+          </li>
+
+          <!-- Для adv-list__item будут заданы размеры "x на x", adv-list__img-item же "2x на x", как поступить с классами? -->
+
+          <li class="advantages-list__item">
+            <img src="" alt="Городской пейзаж Седоны" class="advantages-list__img-item">
+          </li>
+          <li class="advantages-list__item">
+            <dt class="advantages-list__item-title">Небольшая
+              площадь</dt>
+            <dd class="advantages-list__item-desc">
+              Все достопримечательности находятся очень близко
+            </dd>
+          </li>
+          <li class="advantages-list__item">
+            <dt class="advantages-list__item-title">Красивая
+              дорога</dt>
+            <dd class="advantages-list__item-desc">
+              Ехать в Седону из Лас-Вегаса совсем не скучно!
+            </dd>
+          </li>
+          <li class="advantages-list__item">
+            <dt class="advantages-list__item-title">Мало
+              туристов</dt>
+            <dd class="advantages-list__item-desc">
+              Большинство едет в Гранд Каньон и толпится там
+            </dd>
+          </li>
+          <li class="advantages-list__item">
+            <img src="" alt="Мост дьявола в Седоне" class="advantages-list__img-item">
+          </li>
+          <li class="advantages-list__item">
+            <dt class="advantages-list__item-title">Там есть
+              мост дьявола</dt>
+            <dd class="advantages-list__item-desc">
+              Да, по нему можно пройти! Если вы осмелитесь, разумеется
+            </dd>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Sedona invitation -->
+      <div class="slogan-wrapper">
+        <h2 class="slogan-wrapper-headline">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+        <p class="text-wrapper-desk">
+          Опытный персонал и качественное обслуживание!
+        </p>
+      </div>
+
+      <!-- Benefits -->
+      <!-- Путаница с классами benefits/advantages -->
+      <section class="benefits">
+        <ul class="sub-adventages-list">
+          <li class="advantages-list__item">
+            <dt class="advantages-list__item-title">Жильё</dt>
+            <dd class="advantages-list__item-desc">
+              Рекомендуем пожить в настоящем мотеле, всё как в кино!
+            </dd>
+          </li>
+          <li class="advantages-list__item">
+            <dt class="advantages-list__item-title">Еда</dt>
+            <dd class="advantages-list__item-desc">
+              Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
+            </dd>
+          </li>
+          <li class="advantages-list__item">
+            <dt class="advantages-list__item-title">Сувениры</dt>
+            <dd class="advantages-list__item-desc">
+              Не только китайского, но и настоящего местного производства!
+            </dd>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Hotel search -->
+      <div class="slogan-wrapper search-hotel">
+        <h2 class="slogan-wrapper-headline">Заинтересовались?</h2>
+        <p class="text-wrapper-desc">
+          Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+        </p>
+        <a href="#" class="button search-hotel-button">Поиск гостиницы в Седоне</a>
+      </div>
+
+      <!-- Newsletter subscription -->
+      <article class="main-email-subscription">
+        <h2 class="white-slogan-wrapper-headline">Подпишитесь на рассылку</h2>
+        <p class="slogan-wrapper-desc">
+          Только полезная информация и никакого спама, честное бойскаутское!
+        </p>
+        <form class="email-row">
+          <input type="text" class="email-input" placeholder="Ваш e-mail">
+          <button type="submit">Подписаться</button>
+        </form>
+      </article>
+
+      <!-- Footer -->
+      <footer class="page-footer">
+        <ul class="page-footer-items">
+          <li class="page-footer-social">
+            <ul class="social-links">
+              <li class="social-links__item"><a href="#"><img src="" alt="ссылка на VK"></a></li>
+              <li class="social-links__item"><a href="#"><img src="" alt="ссылка на telegram"></a></li>
+              <li class="social-links__item"><a href="#"><img src="" alt="ссылка на YouTube"></a></li>
+            </ul>
+          </li>
+          <li class="page-footer-item">
+            <a href="tel:88128121212" class="page-footer-telephone">+7 (812) 812-12-12</a>
+          </li>
+          <li class="page-footer-item">
+            <img src="" alt="" class="page-footer-copyright">
+          </li>
+        </ul>
+      </footer>
+
+    </main>
   </body>
 </html>
