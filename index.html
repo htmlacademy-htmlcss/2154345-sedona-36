@@ -126,7 +126,7 @@
       <!-- Benefits -->
       <!-- Путаница с классами benefits/advantages -->
       <section class="benefits">
-        <ul class="sub-adventages-list">
+        <ul class="benefits-list">
           <li class="advantages-list__item">
             <dt class="advantages-list__item-title">Жильё</dt>
             <dd class="advantages-list__item-desc">
@@ -159,32 +159,39 @@
 
       <!-- Newsletter subscription -->
       <article class="main-email-subscription">
-        <h2 class="white-slogan-wrapper-headline">Подпишитесь на рассылку</h2>
-        <p class="slogan-wrapper-desc">
+        <h2 class="white-text-slogan-wrapper-headline">Подпишитесь на рассылку</h2>
+        <p class="white-text-slogan-wrapper-desc">
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
-        <form class="email-row">
-          <input type="text" class="email-input" placeholder="Ваш e-mail">
-          <button type="submit">Подписаться</button>
+        <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <input type="email" class="field" placeholder="Ваш e-mail" name="newsletter-email" required>
+          <button class="button newsletter-button"type="submit">Подписаться</button>
         </form>
       </article>
 
       <!-- Footer -->
       <footer class="page-footer">
-        <ul class="page-footer-items">
-          <li class="page-footer-social">
-            <ul class="social-links">
-              <li class="social-links__item"><a href="#"><img src="" alt="ссылка на VK"></a></li>
-              <li class="social-links__item"><a href="#"><img src="" alt="ссылка на telegram"></a></li>
-              <li class="social-links__item"><a href="#"><img src="" alt="ссылка на YouTube"></a></li>
-            </ul>
-          </li>
-          <li class="page-footer-item">
+        <sectoin class="footer-social"></sectoin>
+          <h2 class="visually-hidden">
+            Ссылки на социальные сети
+          </h2>
+          <ul class="social-links">
+            <li class="social-links__item">
+              <a class="social-button" href="Vkontakte — https://vk.com/htmlacademy"><span class="visually-hidden">ВКонтакте</span></a>
+            </li>
+            <li class="social-links__item">
+              <a class="social-button" href="Telegram — https://t.me/htmlacademy"><span class="visually-hidden">Телеграм</span></a>
+            </li>
+            <li class="social-links__item">
+              <a class="social-button" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
+            </li>
+          </ul>
+          <p footer-phone>
             <a href="tel:88128121212" class="page-footer-telephone">+7 (812) 812-12-12</a>
-          </li>
-          <li class="page-footer-item">
-            <img src="" alt="" class="page-footer-copyright">
-          </li>
+          </p>
+          <p footer-copyright>
+            <a class="copyright-button" href="https://htmlacademy.ru/"><span class="visually-hidden">.html academy</span></a>
+          </p>
         </ul>
       </footer>
 
