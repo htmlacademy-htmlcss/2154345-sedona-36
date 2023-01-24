@@ -9,16 +9,14 @@
     <!-- Header -->
     <header class="page-header">
       <nav class="navigation">
-        <div class="navigation-left-side">
-          <img src="" alt="Логотип Седоны" class="navigation-logo">
+          <a href="index.html" class="navigation-logo__link">
+              <img src="" alt="Логотип Седоны" class="navigation-logo">
+          </a>
           <ul class="navigation-links">
-            <li class="navigation-links__item"><a href="#" class="navigation-links__link">Главная</a></li>
-            <li class="navigation-links__item"><a href="#" class="navigation-links__link">О Седоне</a></li>
-            <li class="navigation-links__item"><a href="catalog.html" class="navigation-links__link">Гостиницы</a></li>
+              <li class="navigation-links__item"><a href="#" class="navigation-links__link">Главная</a></li>
+              <li class="navigation-links__item"><a href="#" class="navigation-links__link">О Седоне</a></li>
+              <li class="navigation-links__item"><a href="catalog.html" class="navigation-links__link">Гостиницы</a></li>
           </ul>
-        </div>
-
-        <div class="navigation-right-side">
           <ul class="navigation-links clickable-links">
             <li class="clickable-links__item">
               <a href="#" class="clickable-links__link">
@@ -30,11 +28,12 @@
                 <span class="visually-hidden">Избранные</span>
               </a>
             </li>
+            <li class="clickable-links__item">
+              <a href="#" class="button clickable-links__button">Хочу сюда!</a>
+            </li>
           </ul>
-          <a href="#" class="button clickable-links__button">Хочу сюда!</a>
-        </div>
       </nav>
-    </header>
+  </header>
 
     <!-- Main -->
     <main class="main-index">
@@ -47,14 +46,6 @@
           <img src="" alt="" class="image-sup-welcome-text">
           <img src="" alt="" class="image-sedona-text">
         </div>
-        <div class="slogan-wrapper">
-          <h2 class="slogan-wrapper-headline">
-            Седона — небольшой городок в Аризоне, заслуживающий большего!
-          </h2>
-          <p class="text-wrapper-desk">
-            Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
-          </p>
-        </div>
       </section>
 
       <!-- Advantages -->
@@ -63,19 +54,25 @@
         altarnate: сетка на гридах(квадратики напомнили гриды с тренажеров)
       -->
       <section class="advantages">
-        <h2 class="visually-hidden">Преимущества</h2>
+        <div class="slogan-wrapper">
+            <h2 class="slogan-wrapper-headline">
+              Седона — небольшой городок в Аризоне, заслуживающий большего!
+            </h2>
+            <p class="slogan-wrapper-desk">
+              Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
+            </p>
+        </div>
         <dl class="advantages-list">
-          <div class="advantages-list__item">
-            <dt class="advantages-list__item-title">Настоящий городок</dt>
-            <dd class="advantages-list__item-desc">
-              Седона — не аттракцион для туристов, там течёт своя жизнь
-            </dd>
-          </div>
-
-          <!-- Для adv-list__item будут заданы размеры "x на x", adv-list__img-item же "2x на x",
-            типа конфликт возникнет наверное, как поступить с классами? -->
-          <div class="advantages-list__item">
-            <img src="" alt="Городской пейзаж Седоны" class="advantages-list__img-item">
+          <div class="advantages-list-wrapper">
+            <div class="advantages-list__item">
+              <dt class="advantages-list__item-title">Настоящий городок</dt>
+              <dd class="advantages-list__item-desc">
+                Седона — не аттракцион для туристов, там течёт своя жизнь
+              </dd>
+            </div>
+            <div class="advantages-list__item">
+              <img src="" alt="Городской пейзаж Седоны" class="advantages-list__img-item">
+            </div>
           </div>
           <div class="advantages-list__item">
             <dt class="advantages-list__item-title">Небольшая
@@ -98,30 +95,28 @@
               Большинство едет в Гранд Каньон и толпится там
             </dd>
           </div>
-          <div class="advantages-list__item">
-            <img src="" alt="Мост дьявола в Седоне" class="advantages-list__img-item">
-          </div>
-          <div class="advantages-list__item">
-            <dt class="advantages-list__item-title">Там есть
-              мост дьявола</dt>
-            <dd class="advantages-list__item-desc">
-              Да, по нему можно пройти! Если вы осмелитесь, разумеется
-            </dd>
+          <div class="advantages-list-wrapper">
+            <div class="advantages-list__item">
+              <img src="" alt="Мост дьявола в Седоне" class="advantages-list__img-item">
+            </div>
+            <div class="advantages-list__item">
+              <dt class="advantages-list__item-title">Там есть
+                мост дьявола</dt>
+              <dd class="advantages-list__item-desc">
+                Да, по нему можно пройти! Если вы осмелитесь, разумеется
+              </dd>
+            </div>
           </div>
         </dl>
       </section>
 
-      <!-- Sedona invitation -->
-      <div class="slogan-wrapper">
-        <h2 class="slogan-wrapper-headline">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-        <p class="text-wrapper-desk">
-          Опытный персонал и качественное обслуживание!
-        </p>
-      </div>
-
-      <!-- Benefits -->
-      <!-- Путаница с классами benefits/advantages -->
       <section class="benefits">
+        <div class="slogan-wrapper">
+          <h2 class="slogan-wrapper-headline">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+          <p class="slogan-wrapper-desk">
+            Опытный персонал и качественное обслуживание!
+          </p>
+        </div>
         <dl class="benefits-list">
           <div class="advantages-list__item">
             <dt class="advantages-list__item-title">Жильё</dt>
@@ -160,7 +155,7 @@
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input type="email" class="field" placeholder="Ваш e-mail" name="newsletter-email" required>
+          <input type="email" class="field" placeholder="Ваш e-mail" name="newsletter-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
           <button class="button newsletter-button"type="submit">Подписаться</button>
         </form>
       </article>
