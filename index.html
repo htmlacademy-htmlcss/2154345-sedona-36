@@ -7,37 +7,36 @@
   <body>
 
     <!-- Header -->
-
     <header class="page-header">
       <nav class="navigation">
+        <div class="navigation-left-side">
+          <img src="" alt="Логотип Седоны" class="navigation-logo">
+          <ul class="navigation-links">
+            <li class="navigation-links__item"><a href="#" class="navigation-links__link">Главная</a></li>
+            <li class="navigation-links__item"><a href="#" class="navigation-links__link">О Седоне</a></li>
+            <li class="navigation-links__item"><a href="catalog.html" class="navigation-links__link">Гостиницы</a></li>
+          </ul>
+        </div>
 
-        <ul class="navigation-links">
-          <li class="navigation-links__item"><a href="#" class="navigation-links__link">Главная</a></li>
-          <li class="navigation-links__item"><a href="#" class="navigation-links__link">О Седоне</a></li>
-          <li class="navigation-links__item"><a href="#" class="navigation-links__link">Гостиницы</a></li>
-        </ul>
-
-        <ul class="navigation-links clickable-links">
-          <li class="clickable-links__item">
-            <a href="#" class="clickable-links__link">
-              <span class="visually-hidden">Поиск</span>
-            </a>
-          </li>
-          <li class="clickable-links__item">
-            <a href="#" class="clickable-links__link">
-              <span class="visually-hidden">Избранные</span>
-            </a>
-          </li>
-          <li class="clickable-links__item">
-            <a href="#" class="button clickable-links__button">Хочу сюда!</a>
-          </li>
-        </ul>
-
+        <div class="navigation-right-side">
+          <ul class="navigation-links clickable-links">
+            <li class="clickable-links__item">
+              <a href="#" class="clickable-links__link">
+                <span class="visually-hidden">Поиск</span>
+              </a>
+            </li>
+            <li class="clickable-links__item">
+              <a href="#" class="clickable-links__link">
+                <span class="visually-hidden">Избранные</span>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="button clickable-links__button">Хочу сюда!</a>
+        </div>
       </nav>
     </header>
 
     <!-- Main -->
-
     <main class="main-index">
 
       <!-- Hero -->
@@ -65,54 +64,51 @@
       -->
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
-        <ul class="advantages-list">
-          <li class="advantages-list__item">
-
-            <!-- Выразительнее dt и dd или h3 и p? -->
-
+        <dl class="advantages-list">
+          <div class="advantages-list__item">
             <dt class="advantages-list__item-title">Настоящий городок</dt>
             <dd class="advantages-list__item-desc">
               Седона — не аттракцион для туристов, там течёт своя жизнь
             </dd>
-          </li>
+          </div>
 
-          <!-- Для adv-list__item будут заданы размеры "x на x", adv-list__img-item же "2x на x", как поступить с классами? -->
-
-          <li class="advantages-list__item">
+          <!-- Для adv-list__item будут заданы размеры "x на x", adv-list__img-item же "2x на x",
+            типа конфликт возникнет наверное, как поступить с классами? -->
+          <div class="advantages-list__item">
             <img src="" alt="Городской пейзаж Седоны" class="advantages-list__img-item">
-          </li>
-          <li class="advantages-list__item">
+          </div>
+          <div class="advantages-list__item">
             <dt class="advantages-list__item-title">Небольшая
               площадь</dt>
             <dd class="advantages-list__item-desc">
               Все достопримечательности находятся очень близко
             </dd>
-          </li>
-          <li class="advantages-list__item">
+          </div>
+          <div class="advantages-list__item">
             <dt class="advantages-list__item-title">Красивая
               дорога</dt>
             <dd class="advantages-list__item-desc">
               Ехать в Седону из Лас-Вегаса совсем не скучно!
             </dd>
-          </li>
-          <li class="advantages-list__item">
+          </div>
+          <div class="advantages-list__item">
             <dt class="advantages-list__item-title">Мало
               туристов</dt>
             <dd class="advantages-list__item-desc">
               Большинство едет в Гранд Каньон и толпится там
             </dd>
-          </li>
-          <li class="advantages-list__item">
+          </div>
+          <div class="advantages-list__item">
             <img src="" alt="Мост дьявола в Седоне" class="advantages-list__img-item">
-          </li>
-          <li class="advantages-list__item">
+          </div>
+          <div class="advantages-list__item">
             <dt class="advantages-list__item-title">Там есть
               мост дьявола</dt>
             <dd class="advantages-list__item-desc">
               Да, по нему можно пройти! Если вы осмелитесь, разумеется
             </dd>
-          </li>
-        </ul>
+          </div>
+        </dl>
       </section>
 
       <!-- Sedona invitation -->
@@ -126,26 +122,26 @@
       <!-- Benefits -->
       <!-- Путаница с классами benefits/advantages -->
       <section class="benefits">
-        <ul class="benefits-list">
-          <li class="advantages-list__item">
+        <dl class="benefits-list">
+          <div class="advantages-list__item">
             <dt class="advantages-list__item-title">Жильё</dt>
             <dd class="advantages-list__item-desc">
               Рекомендуем пожить в настоящем мотеле, всё как в кино!
             </dd>
-          </li>
-          <li class="advantages-list__item">
+          </div>
+          <div class="advantages-list__item">
             <dt class="advantages-list__item-title">Еда</dt>
             <dd class="advantages-list__item-desc">
               Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
             </dd>
-          </li>
-          <li class="advantages-list__item">
+          </div>
+          <div class="advantages-list__item">
             <dt class="advantages-list__item-title">Сувениры</dt>
             <dd class="advantages-list__item-desc">
               Не только китайского, но и настоящего местного производства!
             </dd>
-          </li>
-        </ul>
+          </div>
+        </dl>
       </section>
 
       <!-- Hotel search -->
@@ -159,8 +155,8 @@
 
       <!-- Newsletter subscription -->
       <article class="main-email-subscription">
-        <h2 class="white-text-slogan-wrapper-headline">Подпишитесь на рассылку</h2>
-        <p class="white-text-slogan-wrapper-desc">
+        <h2 class="text-slogan-wrapper-headline">Подпишитесь на рассылку</h2>
+        <p class="text-slogan-wrapper-desc">
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -171,7 +167,7 @@
 
       <!-- Footer -->
       <footer class="page-footer">
-        <sectoin class="footer-social"></sectoin>
+        <sectoin class="footer-social">
           <h2 class="visually-hidden">
             Ссылки на социальные сети
           </h2>
@@ -186,13 +182,13 @@
               <a class="social-button" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
             </li>
           </ul>
-          <p footer-phone>
-            <a href="tel:88128121212" class="page-footer-telephone">+7 (812) 812-12-12</a>
-          </p>
-          <p footer-copyright>
-            <a class="copyright-button" href="https://htmlacademy.ru/"><span class="visually-hidden">.html academy</span></a>
-          </p>
-        </ul>
+        </sectoin>
+        <p class="footer-phone">
+          <a href="tel:88128121212" class="page-footer-telephone">+7 (812) 812-12-12</a>
+        </p>
+        <p class="footer-copyright">
+          <a class="copyright-button" href="https://htmlacademy.ru/"><span class="visually-hidden">.html academy</span></a>
+        </p>
       </footer>
 
     </main>
