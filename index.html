@@ -10,7 +10,7 @@
     <header class="page-header">
       <nav class="navigation">
           <a href="index.html" class="navigation-logo__link">
-              <img src="" alt="Логотип Седоны" class="navigation-logo">
+              <img class="navigation-logo" src="images/logo.png" alt="Логотип Седоны" width="140" height="70.05">
           </a>
           <ul class="navigation-links">
               <li class="navigation-links__item"><a href="#" class="navigation-links__link navigation-links__link-current">Главная</a></li>
@@ -40,10 +40,8 @@
 
       <!-- Hero -->
       <section class="main-hero">
-        <div class="hero-images-wrapper">
-          <h1 class="visually-hidden">Городок Седона</h1>
-          <img src="" alt="Добро пожаловать в Седону" class="welcome-image">
-        </div>
+        <h1 class="visually-hidden">Городок Седона</h1>
+        <img class="welcome-image" src="images/index-header-bg.jpg" alt="Добро пожаловать в Седону" width="1200" height="485">
         <div class="hero-Nikitas-triangles">
           <span class="hero-Nikitas-triangles-image"></span>
         </div>
@@ -55,14 +53,12 @@
         altarnate: сетка на гридах(квадратики напомнили гриды с тренажеров)
       -->
       <section class="advantages">
-        <div class="slogan-wrapper">
-            <h2 class="slogan-wrapper-headline">
-              Седона — небольшой городок в Аризоне, заслуживающий большего!
-            </h2>
-            <p class="slogan-wrapper-desk">
-              Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
-            </p>
-        </div>
+        <h2 class="slogan-wrapper-headline">
+          Седона — небольшой городок в Аризоне, заслуживающий большего!
+        </h2>
+        <p class="slogan-wrapper-desk">
+          Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
+        </p>
         <dl class="advantages-list">
           <div class="advantages-list-wrapper">
             <div class="advantages-list__item">
@@ -72,7 +68,7 @@
               </dd>
             </div>
             <div class="advantages-list__item">
-              <img src="" alt="Городской пейзаж Седоны" class="advantages-list__img-item">
+              <img class="advantages-list__img-item" src="images/advanteges-photos/photo-1.jpg" alt="Городской пейзаж Седоны" width="800" height="384">
             </div>
           </div>
           <div class="advantages-list__item">
@@ -98,7 +94,7 @@
           </div>
           <div class="advantages-list-wrapper">
             <div class="advantages-list__item">
-              <img src="" alt="Мост дьявола в Седоне" class="advantages-list__img-item">
+              <img class="advantages-list__img-item" src="images/advanteges-photos/photo-2.jpg" alt="Мост дьявола в Седоне" width="800" height="385">
             </div>
             <div class="advantages-list__item">
               <dt class="advantages-list__item-title">Там есть
@@ -112,12 +108,10 @@
       </section>
 
       <section class="benefits">
-        <div class="slogan-wrapper">
-          <h2 class="slogan-wrapper-headline">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-          <p class="slogan-wrapper-desk">
-            Опытный персонал и качественное обслуживание!
-          </p>
-        </div>
+        <h2 class="slogan-wrapper-headline">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+        <p class="slogan-wrapper-desk">
+          Опытный персонал и качественное обслуживание!
+        </p>
         <dl class="benefits-list">
           <div class="advantages-list__item">
             <dt class="advantages-list__item-title">Жильё</dt>
@@ -141,13 +135,13 @@
       </section>
 
       <!-- Hotel search -->
-      <div class="slogan-wrapper search-hotel">
+      <section class="slogan-wrapper hotel-search">
         <h2 class="slogan-wrapper-headline">Заинтересовались?</h2>
         <p class="text-wrapper-desc">
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
-        <a href="#" class="button search-hotel-button">Поиск гостиницы в Седоне</a>
-      </div>
+        <a href="catalog.html" class="button search-hotel-button">Поиск гостиницы в Седоне</a>
+      </section>
 
       <!-- Newsletter subscription -->
       <article class="main-email-subscription">
@@ -163,28 +157,23 @@
 
       <!-- Footer -->
       <footer class="page-footer">
-        <sectoin class="footer-social">
-          <h2 class="visually-hidden">
-            Ссылки на социальные сети
-          </h2>
-          <ul class="social-links">
-            <li class="social-links__item">
-              <a class="social-button" href="Vkontakte — https://vk.com/htmlacademy"><span class="visually-hidden">ВКонтакте</span></a>
-            </li>
-            <li class="social-links__item">
-              <a class="social-button" href="Telegram — https://t.me/htmlacademy"><span class="visually-hidden">Телеграм</span></a>
-            </li>
-            <li class="social-links__item">
-              <a class="social-button" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
-            </li>
-          </ul>
-        </sectoin>
-        <p class="footer-phone">
-          <a href="tel:88128121212" class="page-footer-telephone">+7 (812) 812-12-12</a>
-        </p>
-        <p class="footer-copyright">
-          <a class="copyright-button" href="https://htmlacademy.ru/"><span class="visually-hidden">.html academy</span></a>
-        </p>
+        <ul class="footer-social">
+          <li class="footer-social__item">
+            <a class="social-button" href="https://vk.com/htmlacademy"><span class="visually-hidden">ссылка на ВКонтакте</span></a>
+          </li>
+          <li class="footer-social__item">
+            <a class="social-button" href="https://t.me/htmlacademy"><span class="visually-hidden">ссылка на Телеграм</span></a>
+          </li>
+          <li class="footer-social__item">
+            <a class="social-button" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">ссылка на Ютуб</span></a>
+          </li>
+        </ul>
+        <a class="footer-telephone" href="tel:88128121212">
+          +7 (812) 812-12-12
+        </a>
+        <a class="footer-copyright" href="https://htmlacademy.ru/">
+          <span class="visually-hidden">.html academy</span>
+        </a>
       </footer>
 
     </main>
