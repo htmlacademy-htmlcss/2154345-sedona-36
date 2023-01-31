@@ -36,6 +36,8 @@ body {
     background-color: #756157;
 }
 
+/* Навигация */
+
 .navigation a {
     font-weight: 700;
     text-align: center;
@@ -76,10 +78,12 @@ body {
     text-transform: uppercase;
 }
 
-.slogan-wrapper-desk {
+.slogan-wrapper-desc {
     font-size: 22px;
     line-height: 26px;
 }
+
+/* Преимущества */
 
 .advantages-list__item-title {
     font-size: 24px;
@@ -108,10 +112,14 @@ body {
     background-color: #82B3D3;
 }
 
+/* Поиск отеля */
+
 .search-hotel-button {
     font-style: 20px;
     line-height: 36px;
 }
+
+/* Рассылка */
 
 .main-email-subscription {
     color: #ffffff;
@@ -120,13 +128,19 @@ body {
     background-size: 100% auto;
 }
 
+.newsletter-form .field {
+    font-size: 18px;
+    line-height: 24px;
+}
+
 .newsletter-button {
     font-size: 20px;
     line-height: 36px;
+    background-color: #82B3D3;
 }
 
+/* Футер */
 
-/* !!!Картинки не кликабельны, так как background задан для li, а не для a!!! */
 .footer-social__item:first-child {
     background: url("../images/social-icons/vk.svg") no-repeat 50% 50%;
 }
@@ -146,7 +160,7 @@ body {
     text-decoration: none;
 }
 
-
+/* Хедер каталога */
 
 .inner-header {
     color: #ffffff;
@@ -171,6 +185,8 @@ body {
     line-height: 21px;
 }
 
+/* Фильтры */
+
 .catalog-filter-title {
     font-size: 20px;
     font-weight: 700;
@@ -193,6 +209,8 @@ body {
     line-height: 20px;
     background-color: transparent;
 }
+
+/* Опции показа карточек отелей */
 
 .search-results {
     text-align: left;
@@ -222,6 +240,81 @@ body {
     background: url("../images/cards-view-icons/view-icon-3.svg") no-repeat 50% 50%;
 }
 
+/* Карточки отелей */
+
 .hotels-cards {
     text-align: left;
+}
+
+.hotels-cards a {
+    text-decoration: none;
+}
+
+.hotels-cards .button {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.hotel-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #000000;
+}
+
+.hotel-card-info {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.hotel-card-price {
+    text-align: right;
+}
+
+.card-details-button {
+
+}
+
+.card-favorites-button {
+    background-color: #82B3D3;
+}
+
+.card-favorites-selected-button {
+    background-color: #7DB54F;
+}
+
+.card-stars-button {
+    background-color: transparent;
+}
+
+.card-star {
+    background: url("../images/hotel-star.svg") no-repeat 50% 50%;
+}
+
+.card-rating-button {
+    font-weight: 400;
+    color: #333333;
+    background-color: #F2F2F2;
+}
+
+/* Pagination */
+
+.pagination a {
+    font-size: 20px;
+    line-height: 36px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.pagination__item a {
+    background-color: #82B3D3;
+}
+
+.pagination-current a {
+    color: #000000;
+    background-color: #F2F2F2;
+}
+
+.pagination-ellipsis a {
+    background-color: transparent;
 }

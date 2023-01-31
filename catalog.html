@@ -185,19 +185,21 @@
                                 <span class="hotel-card-type">Гостиница</span>
                                 <span class="hotel-card-price">От 4000 ₽</span>
                             </p>
-                            <a href="#" class="hotel-card-button hotel-card-details">
+                            <a href="#" class="button card-details-button">
                                 Подробнее
                             </a>
-                            <a href="#" class="hotel-card-button hotel-card-favorites">
+                            <a href="#" class="button card-favorites-button">
                                 В избранное
                             </a>
-                            <ul class="hotel-card-button hotel-card-stars">
+
+                            <!-- Классы "кнопок" звёзд -->
+                            <ul class="button card-stars-button">
                                 <li class="card-star"></li>
                                 <li class="card-star"></li>
                                 <li class="card-star"></li>
                                 <li class="card-star"></li>
                             </ul>
-                            <span class="hotel-card-button hotel-card-rating">
+                            <span class="button card-rating-button">
                                 Рейтинг: 8,5
                             </span>
                         </li>
@@ -210,19 +212,19 @@
                                 <span class="hotel-card-type">Гостиница</span>
                                 <span class="hotel-card-price">От 5000 ₽</span>
                             </p>
-                            <a href="#" class="hotel-card-button hotel-card-details">
+                            <a href="#" class="button card-details-button">
                                 Подробнее
                             </a>
-                            <a href="#" class="hotel-card-button hotel-card-favorites-selected">
+                            <a href="#" class="button card-favorites-selected-button">
                                 В избранном
                             </a>
-                            <ul class="hotel-card-button hotel-card-stars">
+                            <ul class="button card-stars-button">
                                 <li class="card-star"></li>
                                 <li class="card-star"></li>
                                 <li class="card-star"></li>
                                 <li class="card-star"></li>
                             </ul>
-                            <span class="hotel-card-button hotel-card-rating">
+                            <span class="button card-rating-button">
                                 Рейтинг: 9,2
                             </span>
                         </li>
@@ -235,18 +237,18 @@
                                 <span class="hotel-card-type">Гостиница</span>
                                 <span class="hotel-card-price">От 2500 ₽</span>
                             </p>
-                            <a href="#" class="hotel-card-button hotel-card-details">
+                            <a href="#" class="button card-details-button">
                                 Подробнее
                             </a>
-                            <a href="#" class="hotel-card-button hotel-card-favorites">
+                            <a href="#" class="button card-favorites-button">
                                 В избранное
                             </a>
-                            <ul class="hotel-card-button hotel-card-stars">
+                            <ul class="button card-stars-button">
                                 <li class="card-star"></li>
                                 <li class="card-star"></li>
                                 <li class="card-star"></li>
                             </ul>
-                            <span class="hotel-card-button hotel-card-rating">
+                            <span class="button card-rating-button">
                                 Рейтинг: 6,9
                             </span>
                         </li>
@@ -259,17 +261,17 @@
                                 <span class="hotel-card-type">Гостиница</span>
                                 <span class="hotel-card-price">От 1500 ₽</span>
                             </p>
-                            <a href="#" class="hotel-card-button hotel-card-details">
+                            <a href="#" class="button card-details-button">
                                 Подробнее
                             </a>
-                            <a href="#" class="hotel-card-button hotel-card-favorites">
+                            <a href="#" class="button card-favorites-button">
                                 В избранное
                             </a>
-                            <ul class="hotel-card-button hotel-card-stars">
+                            <ul class="button card-stars-button">
                                 <li class="card-star"></li>
                                 <li class="card-star"></li>
                             </ul>
-                            <span class="hotel-card-button hotel-card-rating">
+                            <span class="button card-rating-button">
                                 Рейтинг: 5,0
                             </span>
                         </li>
@@ -278,31 +280,31 @@
 
                 <!-- Pagination -->
                 <ul class="pagination">
-                    <li class="pagination__item">
-                        <a class="pagination-link pagination-current" href="#">1</a>
+                    <li class="pagination__item pagination-current">
+                        <a class="button pagination-link" href="#">1</a>
                     </li>
                     <li class="pagination__item">
-                        <a class="pagination-link" href="#">2</a>
+                        <a class="button pagination-link" href="#">2</a>
                     </li>
                     <li class="pagination__item">
-                        <a class="pagination-link" href="#">3</a>
+                        <a class="button pagination-link" href="#">3</a>
                     </li>
                     <li class="pagination__item">
-                        <a class="pagination-link" href="#">4</a>
+                        <a class="button pagination-link" href="#">4</a>
+                    </li>
+                    <li class="pagination__item pagination-ellipsis">
+                        <a class="button pagination-link" href="#">...</a>
                     </li>
                     <li class="pagination__item">
-                        <a class="pagination-link pagination-ellipsis" href="#">...</a>
-                    </li>
-                    <li class="pagination__item">
-                        <a class="pagination-link" href="#">10</a>
+                        <a class="button pagination-link" href="#">10</a>
                     </li>
                 </ul>
             </section>
 
             <!-- Newsletter subscription -->
             <article class="inner-email-subscription">
-                <h2 class="text-slogan-wrapper-headline">Подпишитесь на рассылку</h2>
-                <p class="text-slogan-wrapper-desc">
+                <h2 class="slogan-wrapper-headline">Подпишитесь на рассылку</h2>
+                <p class="slogan-wrapper-desc">
                     Только полезная информация и никакого спама, честное бойскаутское!
                 </p>
                 <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
