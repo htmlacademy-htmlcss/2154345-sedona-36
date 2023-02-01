@@ -15,12 +15,19 @@
 }
 
 body {
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
     margin: 0;
     color: #000000;
+    background-color: #f2f2f2;
+}
+
+.page-container {
+    width: 1200px;
+    margin: 0 auto;
+
     background-color: #ffffff;
 }
 
@@ -41,9 +48,26 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.button-brown {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
     color: #ffffff;
     background-color: #756157;
 }
+
+.button-blue {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #82b3d3;
+}
+
 
 /* Навигация */
 
@@ -64,11 +88,11 @@ body {
     color: inherit;
 }
 
-.clickable-links__item:first-child {
+.clickable-links__item:first-child a {
     background: url("../images/icons/search.svg") no-repeat 50% 50%;
 }
 
-.clickable-links__item:nth-child(2) {
+.clickable-links__item:nth-child(2) a {
     background: url("../images/icons/heart.svg") no-repeat 50% 50%;
 }
 
@@ -120,6 +144,10 @@ body {
     background-color: rgba(131, 179, 211, 0.12);
 }
 
+.benefits .advantages-list__item:nth-child(2) {
+    background-color: #ffffff;
+}
+
 .advantages-list-wrapper .advantages-list__item {
     color: #ffffff;
     background-color: #82B3D3;
@@ -128,7 +156,7 @@ body {
 /* Поиск отеля */
 
 .search-hotel-button {
-    font-style: 20px;
+    font-size: 20px;
     line-height: 36px;
 }
 
@@ -149,20 +177,19 @@ body {
 .newsletter-button {
     font-size: 20px;
     line-height: 36px;
-    background-color: #82B3D3;
 }
 
 /* Футер */
 
-.footer-social__item:first-child {
+.footer-social__item:first-child a {
     background: url("../images/social-icons/vk.svg") no-repeat 50% 50%;
 }
 
-.footer-social__item:nth-child(2) {
+.footer-social__item:nth-child(2) a {
     background: url("../images/social-icons/tg.svg") no-repeat 50% 50%;
 }
 
-.footer-social__item:last-child {
+.footer-social__item:last-child a {
     background: url("../images/social-icons/yt.svg") no-repeat 50% 50%;
 }
 
@@ -189,13 +216,13 @@ body {
     line-height: 78px;
 }
 
-.breadcrumbs-item:first-child {
-    background: url("../images/breadcrumbs-home.svg") no-repeat 50% 50%;
-}
-
 .breadcrumbs-link {
     font-size: 16px;
     line-height: 21px;
+}
+
+.breadcrumbs-item:first-child a {
+    background: url("../images/breadcrumbs-home.svg") no-repeat 50% 50%;
 }
 
 /* Фильтры */
@@ -214,12 +241,12 @@ body {
 .button-accept {
     font-size: 16px;
     line-height: 20px;
-    background-color: #82B3D3;
 }
 
 .button-cancel {
     font-size: 16px;
     line-height: 20px;
+    color: #ffffff;
     background-color: transparent;
 }
 
@@ -241,15 +268,15 @@ body {
     line-height: 21px;
 }
 
-.option-buttons__item:first-child {
+.option-buttons__item:first-child a {
     background: url("../images/cards-view-icons/view-icon-1.svg") no-repeat 50% 50%;
 }
 
-.option-buttons__item:nth-child(2) {
+.option-buttons__item:nth-child(2) a {
     background: url("../images/cards-view-icons/view-icon-2.svg") no-repeat 50% 50%;
 }
 
-.option-buttons__item:last-child {
+.option-buttons__item:last-child a {
     background: url("../images/cards-view-icons/view-icon-3.svg") no-repeat 50% 50%;
 }
 
@@ -263,7 +290,7 @@ body {
     text-decoration: none;
 }
 
-.hotels-cards .button {
+.hotels-cards [class^="button"] {
     font-size: 16px;
     line-height: 20px;
 }
@@ -284,20 +311,9 @@ body {
     text-align: right;
 }
 
-.card-details-button {
-
-}
-
-.card-favorites-button {
-    background-color: #82B3D3;
-}
-
 .card-favorites-selected-button {
+    color: #ffffff;
     background-color: #7DB54F;
-}
-
-.card-stars-button {
-    background-color: transparent;
 }
 
 .card-star {
@@ -316,11 +332,6 @@ body {
     font-size: 20px;
     line-height: 36px;
     color: #ffffff;
-    text-decoration: none;
-}
-
-.pagination__item a {
-    background-color: #82B3D3;
 }
 
 .pagination-current a {
@@ -329,5 +340,6 @@ body {
 }
 
 .pagination-ellipsis a {
+    color: #000000;
     background-color: transparent;
 }
