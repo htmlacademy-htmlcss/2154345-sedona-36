@@ -1,0 +1,345 @@
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    margin: 0;
+    color: #000000;
+    background-color: #f2f2f2;
+}
+
+.page-container {
+    width: 1200px;
+    margin: 0 auto;
+
+    background-color: #ffffff;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+.button {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.button-brown {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #756157;
+}
+
+.button-blue {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #82b3d3;
+}
+
+
+/* Навигация */
+
+.navigation {
+    list-style: none;
+}
+
+.navigation a {
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navigation-links__link {
+    font-style: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: inherit;
+}
+
+.clickable-links__item:first-child a {
+    background: url("../images/icons/search.svg") no-repeat 50% 50%;
+}
+
+.clickable-links__item:nth-child(2) a {
+    background: url("../images/icons/heart.svg") no-repeat 50% 50%;
+}
+
+.clickable-links__button {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.main-hero {
+    color: #ffffff;
+    background-color: #000000;
+    background: url("../images/index-header-bg.jpg") no-repeat;
+    background-size: 100% auto;
+}
+
+.slogan-wrapper-headline {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.slogan-wrapper-desc {
+    font-size: 22px;
+    line-height: 26px;
+}
+
+/* Преимущества */
+
+.advantages-list__item-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.advantages-list__item-desc {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+/* Задает фоновый цвет нечетным карточкам преимуществ */
+.advantages-list__item:nth-child(odd) {
+    background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* Задает фоновый цвет четным карточкам преимуществ */
+.advantages-list__item:nth-child(even) {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.benefits .advantages-list__item:nth-child(2) {
+    background-color: #ffffff;
+}
+
+.advantages-list-wrapper .advantages-list__item {
+    color: #ffffff;
+    background-color: #82B3D3;
+}
+
+/* Поиск отеля */
+
+.search-hotel-button {
+    font-size: 20px;
+    line-height: 36px;
+}
+
+/* Рассылка */
+
+.main-email-subscription {
+    color: #ffffff;
+    background-color: #000000;
+    background: url("../images/blur-photos/newsletter-bg.jpg") no-repeat;
+    background-size: 100% auto;
+}
+
+.newsletter-form .field {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.newsletter-button {
+    font-size: 20px;
+    line-height: 36px;
+}
+
+/* Футер */
+
+.footer-social__item:first-child a {
+    background: url("../images/social-icons/vk.svg") no-repeat 50% 50%;
+}
+
+.footer-social__item:nth-child(2) a {
+    background: url("../images/social-icons/tg.svg") no-repeat 50% 50%;
+}
+
+.footer-social__item:last-child a {
+    background: url("../images/social-icons/yt.svg") no-repeat 50% 50%;
+}
+
+.footer-telephone {
+    font-size: 40px;
+    line-height: 40px;
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Хедер каталога */
+
+.inner-header {
+    color: #ffffff;
+    background-color: #000000;
+    text-align: left;
+    background: url("../images/blur-photos/catalog-header-bg.jpg") no-repeat;
+    background-size: 100% auto;
+}
+
+.inner-header-title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 78px;
+}
+
+.breadcrumbs-link {
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.breadcrumbs-item:first-child a {
+    background: url("../images/breadcrumbs-home.svg") no-repeat 50% 50%;
+}
+
+/* Фильтры */
+
+.catalog-filter-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.control {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.button-accept {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.button-cancel {
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+/* Опции показа карточек отелей */
+
+.search-results {
+    text-align: left;
+}
+
+.options-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.options-select {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.option-buttons__item:first-child a {
+    background: url("../images/cards-view-icons/view-icon-1.svg") no-repeat 50% 50%;
+}
+
+.option-buttons__item:nth-child(2) a {
+    background: url("../images/cards-view-icons/view-icon-2.svg") no-repeat 50% 50%;
+}
+
+.option-buttons__item:last-child a {
+    background: url("../images/cards-view-icons/view-icon-3.svg") no-repeat 50% 50%;
+}
+
+/* Карточки отелей */
+
+.hotels-cards {
+    text-align: left;
+}
+
+.hotels-cards a {
+    text-decoration: none;
+}
+
+.hotels-cards [class^="button"] {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.hotel-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #000000;
+}
+
+.hotel-card-info {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.hotel-card-price {
+    text-align: right;
+}
+
+.card-favorites-selected-button {
+    color: #ffffff;
+    background-color: #7DB54F;
+}
+
+.card-star {
+    background: url("../images/hotel-star.svg") no-repeat 50% 50%;
+}
+
+.card-rating-button {
+    font-weight: 400;
+    color: #333333;
+    background-color: #F2F2F2;
+}
+
+/* Pagination */
+
+.pagination a {
+    font-size: 20px;
+    line-height: 36px;
+    color: #ffffff;
+}
+
+.pagination-current a {
+    color: #000000;
+    background-color: #F2F2F2;
+}
+
+.pagination-ellipsis a {
+    color: #000000;
+    background-color: transparent;
+}
