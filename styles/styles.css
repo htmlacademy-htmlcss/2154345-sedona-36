@@ -71,8 +71,35 @@ body {
 
 /* Навигация */
 
+.page-header {
+    height: 64px;
+}
+
 .navigation {
+    display: flex;
     list-style: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-logo__link {
+    margin-left: 70px;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation .navigation-links {
+    margin-left: 28px;
+}
+
+.navigation .navigation-clickable-links {
+    margin-left: 285px;
 }
 
 .navigation a {
@@ -82,10 +109,44 @@ body {
 }
 
 .navigation-links__link {
-    font-style: 20px;
+    display: inline-block;
+    padding: 20px 16px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 24px;
     color: inherit;
+}
+
+.clickable-links__link {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 22px 12px;
+}
+
+.clickable-links__button {
+    display: inline-block;
+    margin: 14px 0 14px 20px;
+    padding: 8px 34px;
+    border-radius: 4px;
+}
+
+/* Доделать! */
+.nav__favorites-count {
+    position: absolute;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    left: 20px;
+    top: 11px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: #7DB54F;
+    border-radius: 50%;
 }
 
 .clickable-links__item:first-child a {
@@ -93,6 +154,7 @@ body {
 }
 
 .clickable-links__item:nth-child(2) a {
+    position: relative;
     background: url("../images/icons/heart.svg") no-repeat 50% 50%;
 }
 
@@ -102,10 +164,21 @@ body {
 }
 
 .main-hero {
+    position: relative;
+    height: 485px;
     color: #ffffff;
     background-color: #000000;
     background: url("../images/index-header-bg.jpg") no-repeat;
     background-size: 100% auto;
+}
+
+.welcome-image {
+    margin-top: 51px;
+}
+
+.hero-Nikitas-triangles-image {
+    position: absolute;
+    background: url("../images/hero-triangels.svg") no-repeat;
 }
 
 .slogan-wrapper-headline {
@@ -121,6 +194,34 @@ body {
 }
 
 /* Преимущества */
+
+.advantages .slogan-wrapper-headline {
+    margin-top: 69px;
+}
+
+.advantages .slogan-wrapper-desc {
+    margin-top: 25px;
+}
+
+.advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 90px;
+}
+
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantages-list__item {
+    width: 400px;
+    height: 385px;
+}
+
+.advantages-list__image {
+    width: 800px;
+}
 
 .advantages-list__item-title {
     font-size: 24px;
@@ -148,7 +249,8 @@ body {
     background-color: #ffffff;
 }
 
-.advantages-list-wrapper .advantages-list__item {
+.advantages-list .advantages-list__item:nth-child(1),
+.advantages-list .advantages-list__item:nth-child(7) {
     color: #ffffff;
     background-color: #82B3D3;
 }
