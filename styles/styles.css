@@ -50,6 +50,7 @@ body {
     text-decoration: none;
     color: #000000;
     background-color: #ffffff;
+    border-radius: 4px;
 }
 
 .button-brown {
@@ -58,6 +59,7 @@ body {
     text-decoration: none;
     color: #ffffff;
     background-color: #756157;
+    border-radius: 4px;
 }
 
 .button-blue {
@@ -66,6 +68,7 @@ body {
     text-decoration: none;
     color: #ffffff;
     background-color: #82b3d3;
+    border-radius: 4px;
 }
 
 
@@ -128,7 +131,8 @@ body {
     display: inline-block;
     margin: 14px 0 14px 20px;
     padding: 8px 34px;
-    border-radius: 4px;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 /* Доделать! */
@@ -158,11 +162,6 @@ body {
     background: url("../images/icons/heart.svg") no-repeat 50% 50%;
 }
 
-.clickable-links__button {
-    font-size: 16px;
-    line-height: 20px;
-}
-
 .main-hero {
     position: relative;
     height: 485px;
@@ -182,6 +181,7 @@ body {
 }
 
 .slogan-wrapper-headline {
+    margin: 0;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
@@ -189,19 +189,12 @@ body {
 }
 
 .slogan-wrapper-desc {
+    margin: 0;
     font-size: 22px;
     line-height: 26px;
 }
 
 /* Преимущества */
-
-.advantages .slogan-wrapper-headline {
-    margin-top: 69px;
-}
-
-.advantages .slogan-wrapper-desc {
-    margin-top: 25px;
-}
 
 .advantages-list {
     display: flex;
@@ -214,6 +207,32 @@ body {
     flex-wrap: wrap;
 }
 
+.advantages .slogan-wrapper-headline {
+    display: inline-block;
+    width: 620px;
+    margin: 69px auto 0;
+    text-align: center;
+}
+
+.advantages .slogan-wrapper-desc {
+    width: 651px;
+    margin: 25px auto 0;
+    text-align: center;
+}
+
+.benefits .slogan-wrapper-headline {
+    display: inline-block;
+    width: 505px;
+    margin: 64px auto 0;
+    text-align: center;
+}
+
+.benefits .slogan-wrapper-desc {
+    width: 490px;
+    margin: 20px auto 64px;
+    text-align: center;
+}
+
 .advantages-list__item {
     width: 400px;
     height: 385px;
@@ -223,7 +242,59 @@ body {
     width: 800px;
 }
 
+.advantages-list .advantages-list__item {
+    position: relative;
+}
+
+.advantages-list .advantages-list__item::after {
+    position: absolute;
+    top: 187.5px;
+    left: 170px;
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.benefits-list .advantages-list__item {
+    position: relative;
+}
+
+.benefits-list .advantages-list__item::after {
+    position: absolute;
+    top: 81px;
+    left: 162.5px;
+    content: "";
+    width: 75px;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.benefits-list .advantages-list__item:first-child::after {
+    background-image: url("../images/benefits/house.svg")
+}
+
+.benefits-list .advantages-list__item:nth-child(2)::after {
+    background-image: url("../images/benefits/food.svg")
+}
+
+.benefits-list .advantages-list__item:last-child::after {
+    top: 79px;
+    height: 76px;
+    background-image: url("../images/benefits/gift.svg")
+}
+
+.advantages-list__item-title,
+.advantages-list__item-desc {
+    display: inline-block;
+    width: 230px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .advantages-list__item-title {
+    width: 175px;
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
@@ -233,6 +304,22 @@ body {
 .advantages-list__item-desc {
     font-size: 18px;
     line-height: 21px;
+}
+
+.advantages-list .advantages-list__item-title {
+    margin-top: 101.5px;
+}
+
+.advantages-list .advantages-list__item-desc {
+    margin-top: 62px;
+}
+
+.benefits-list .advantages-list__item-title {
+    margin-top: 183px;
+}
+
+.benefits-list .advantages-list__item-desc {
+    margin-top: 30px;
 }
 
 /* Задает фоновый цвет нечетным карточкам преимуществ */
@@ -255,9 +342,27 @@ body {
     background-color: #82B3D3;
 }
 
+.advantages-list .advantages-list__item:nth-child(1)::after,
+.advantages-list .advantages-list__item:nth-child(7)::after {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 /* Поиск отеля */
 
+.slogan-wrapper {
+    width: 592px;
+    min-height: 214px;
+    margin: 96px 304px;
+}
+
+.hotel-search .slogan-wrapper-desc {
+    margin-top: 20px;
+}
+
 .search-hotel-button {
+    display: inline-block;
+    margin-top: 54px;
+    padding: 8px 50px;
     font-size: 20px;
     line-height: 36px;
 }
@@ -271,17 +376,60 @@ body {
     background-size: 100% auto;
 }
 
-.newsletter-form .field {
-    font-size: 18px;
-    line-height: 24px;
+.main-email-subscription .slogan-wrapper-headline {
+    display: inline-block;
+    margin-top: 96px auto 0;
 }
 
-.newsletter-button {
+.main-email-subscription .slogan-wrapper-desc {
+    width: 475px;
+    margin: 20px auto 0;
+}
+
+.newsletter-form {
+    margin-top: 54px;
+}
+
+.newsletter-form .field {
+    /* width: 452px;
+    min-height: 52px; */
+    padding: 14px 345px 14px 20px;
+    font-size: 18px;
+    line-height: 24px;
+    border-width: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.newsletter-form .newsletter-button {
+    margin-left: -4px;
+    padding: 8px 50px;
     font-size: 20px;
     line-height: 36px;
+    border-width: 0;
+    border-radius: 0 4px 4px 0;
 }
 
 /* Футер */
+
+.page-footer {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+}
+
+.footer-social {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-left: 70px;
+}
+
+.footer-social .social-button {
+    display: inline-block;
+    width: 47.33px;
+    height: 40px;
+}
 
 .footer-social__item:first-child a {
     background: url("../images/social-icons/vk.svg") no-repeat 50% 50%;
@@ -296,10 +444,17 @@ body {
 }
 
 .footer-telephone {
+    display: inline-block;
+    width: 720px;
+    height: 50px;
     font-size: 40px;
     line-height: 40px;
     color: #000000;
     text-decoration: none;
+}
+
+.footer-copyright {
+    margin-right: 70px;
 }
 
 /* Хедер каталога */
