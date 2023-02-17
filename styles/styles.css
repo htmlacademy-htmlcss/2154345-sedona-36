@@ -35,8 +35,8 @@ body {
     width: 1200px;
     min-height: 100%;
     margin: 0 auto;
-
     background-color: #ffffff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
@@ -228,14 +228,13 @@ body {
 }
 
 .advantages-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    grid-template-rows: repeat(calc(100% / 385px), 385px);
     margin: 0;
 }
 
-.advantages-list__wrapper {
-    display: flex;
-}
+
 
 .advantages .slogan-wrapper-headline {
     display: inline-block;
@@ -252,27 +251,36 @@ body {
 
 .advantages-list__item {
     position: relative;
-    width: 400px;
+    width: 100%;
     min-height: 385px;
     padding: 102px 85px;
     box-sizing: border-box;
 }
 
-.advantages-list__image-item {
-    display: block;
+.advantages-list__wrapper {
+    grid-column: 3 span;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 385px;
+}
+
+/* .advantages-list__image-item {
+    display: inline-block;
     width: 800px;
     min-height: 385px;
     padding: 0;
-}
+} */
 
 .advantages-list__image {
+    grid-column: 2 span;
+    width: 100%;
     object-fit: cover;
 }
 
 .advantages-list .advantages-list__item::after {
     position: absolute;
     top: 188px;
-    left: 170px;
+    left: 42.5%;
     content: "";
     width: 60px;
     height: 2px;
@@ -346,8 +354,9 @@ body {
 }
 
 .benefits-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(calc(100% / 385px), 385px);
     margin: 0;
 }
 
@@ -366,7 +375,7 @@ body {
     background-position: 50% 50%;
 }
 
-.benefits .advantages-list__item:nth-child(2) {
+.benefits .advantages-list__item:nth-child(2n) {
     background-color: #ffffff;
 }
 
@@ -408,11 +417,14 @@ body {
     padding: 96px 258px 104px;
 }
 
+
+/* Сделать bg-image растягиваемой по высоте */
 .main-email-subscription {
     color: #ffffff;
     background-color: #000000;
     background: url("../images/blur-photos/newsletter-bg.jpg") no-repeat;
-    background-size: 100% auto;
+    background-size: auto;
+    object-fit: cover;
 }
 
 .inner-email-subscription .field {
@@ -433,13 +445,14 @@ body {
 }
 
 .newsletter-form {
-    display: flex;
+    display: grid;
+    grid-template-columns: 452px 232px;
+    grid-template-rows: minmax(52px, max-content);
     font-family: "PT Sans", Arial, sans-serif;
 }
 
 .newsletter-form .field {
-    width: 452px;
-    min-height: 52px;
+    padding: 0;
     padding-left: 20px;
     font-size: 18px;
     line-height: 24px;
@@ -448,7 +461,7 @@ body {
 }
 
 .newsletter-form .newsletter-button {
-    padding: 8px 50px;
+    padding: 0;
     font-size: 20px;
     line-height: 36px;
     border-width: 0;
@@ -460,9 +473,14 @@ body {
 .page-footer {
     display: flex;
     justify-content: space-between;
-    padding: 40px 70px 30px;
-    height: 100%;
     align-items: center;
+    padding: 40px 70px 30px;
+    /* height: 120px; */
+    box-sizing: border-box;
+}
+
+.page-footer svg {
+    display: block;
 }
 
 .footer-social {
@@ -476,18 +494,21 @@ body {
 
 .footer-social .footer-social__item {
     display: inline-block;
-    height: 100%;
+    height: 49px;
 }
 
 .footer-social .social-button {
-    display: inline-block;
+    display: flex;
     width: 47px;
     height: 100%;
     justify-content: center;
+    align-items: center;
 }
 
 .footer-telephone {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 720px;
     height: 50px;
     font-size: 40px;
@@ -497,7 +518,10 @@ body {
 }
 
 .footer-copyright {
-    margin: auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
 }
 
 /* Хедер каталога */
@@ -524,14 +548,22 @@ body {
     line-height: 78px;
 }
 
+/* Breadcrumbs  */
+
 .breadcrumbs {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
+    height: 21px;
+}
+
+.breadcrumbs-item {
+    height: 100%;
 }
 
 .breadcrumbs-link {
+    height: 100%;
     font-size: 16px;
     line-height: 21px;
 }
@@ -540,16 +572,16 @@ body {
     position: relative;
     display: inline-block;
     width: 12px;
-    height: 12px;
+    height: 100%;
     background: url("../images/breadcrumbs-home.svg") no-repeat 50% 50%;
 }
 
-/* .breadcrumbs-item:not(:last-child) a::after {
+.breadcrumbs-item:not(:last-child) a::after {
     position: absolute;
-    display: inline-block;
-    border: solid #ffffff;
-    border-width: 0 3px 3px 0;
-} */
+    content: ">";
+    left: 23px;
+    color: #ffffff;
+}
 
 .breadcrumbs-item:not(:last-child) {
     margin-right: 28.5px;
@@ -558,39 +590,26 @@ body {
 /* Фильтры */
 
 .catalog-filter {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 160px;
+    gap: 140px;
+}
+
+.catalog-filter fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 .filters-group {
-    display: flex;
-}
-
-.filters-group:not(:last-child) {
-    margin-right: 140px;
+    display: grid;
+    grid-template-columns: 151px 151px;
+    gap: 70px;
 }
 
 .filters-group:last-child {
-    justify-content: space-between;
-    width: 549px;
-}
-
-.catalog-filter-group {
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-.filters-group:first-of-type .catalog-filter-group {
-    width: 151px;
-}
-
-.catalog-filter-group:first-of-type {
-    margin-right: 70px;
-}
-
-.filters-group:last-child .catalog-filter-group {
-    width: 288px;
-    height: 160px;
+    grid-template-columns: 288px 191px;
 }
 
 .catalog-filter-group .catalog-filter-list {
@@ -619,16 +638,52 @@ body {
     line-height: 23px;
 }
 
-.catalog-filter-list .control:not(:nth-of-type(3)) {
+.catalog-filter-item:not(:nth-of-type(3)) .control {
     margin-bottom: 16px;
 }
 
-.catalog-filter-buttons-group {
+/* Секция цены */
+
+.catalog-price-range {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 104px;
-    align-self: flex-end
+}
+
+.range-wrapper-inputs {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 36px;
+}
+
+.range-input {
+    width: 143px;
+    height: 48px;
+    padding: 12px 20px;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+.range-wrapper-inputs .range-input:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.range-wrapper-inputs .range-input:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.range-scale {
+    width: 100%;
+    height: 20px;
+}
+
+/* Кнопки фильтра */
+
+.catalog-filter-buttons-group {
+    display: grid;
+    grid-template-columns: 191px;
+    grid-template-rows: 36px 36px;
+    gap: 32px;
+    margin-top: auto;
 }
 
 .catalog-filter-buttons-group button {
@@ -660,9 +715,7 @@ body {
 }
 
 .options-title {
-    flex-shrink: 0;
     margin: 0;
-    margin-right: 200px;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
@@ -672,15 +725,21 @@ body {
 .options-select {
     width: 292px;
     height: 49px;
-    margin-right: 70px;
+    margin-left: 200px;
     font-size: 18px;
     line-height: 21px;
     border: 2px solid #E5E5E5;
 }
 
 .options-buttons-group {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 48px);
+    grid-template-rows: 48px;
+    gap: 8px;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
 }
 
 .option-buttons__item .button {
@@ -716,8 +775,9 @@ body {
 }
 
 .hotels-cards-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, calc(340/1060*100%));
+    grid-template-rows: repeat(2, 438px);
     gap: 20px;
     padding: 0;
     margin: 0;
@@ -727,11 +787,16 @@ body {
 .hotels-cards__item {
     display: flex;
     flex-direction: column;
-    width: 340px;
     padding: 20px;
     box-sizing: border-box;
     border: 1px solid #E6E6E6;
     border-radius: 4px;
+}
+
+.hotel-card-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .hotel-card-row {
