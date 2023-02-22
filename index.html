@@ -154,8 +154,37 @@
           <p class="slogan-wrapper-desc">
             Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
-          <a href="catalog.html" class="button-brown search-hotel-button">Поиск гостиницы в Седоне</a>
+          <a id="popup-open" href="#" class="button-brown search-hotel-button">Поиск гостиницы в Седоне</a>
         </section>
+
+        <!-- Popup :) -->
+        <section id="popup" class="hotel-search-popup">
+          <div class="popup-container">
+            <form action="" class="popup-form">
+              <div id="popup-close" class="popup-close"><span class="popup-close-text">&#10006</span></div>
+              <h2 class="popup-title">Поиск гостиницы в Седоне</h2>
+              <label class="popup-date-label">
+                <span class="popup-label-text">Дата заезда:</span>
+                <input type="date" class="popup-first-date">
+              </label>
+              <label class="popup-date-label">
+                <span class="popup-label-text">Дата выезда:</span>
+                <input type="date" class="popup-secont-date">
+              </label>
+              <label class="popup-people-label">
+                <span class="popup-people-label-text">Взрослые:</span>
+                <input type="number" class="popup-people-count">
+              </label>
+              <label class="popup-people-label">
+                <span class="popup-people-label-text">Дети:</span>
+                <input type="number" class="popup-people-count">
+              </label>
+              <button class="popup-find-button button-blue" type="submit" value="submit">Найти</button>
+            </form>
+          </div>
+        </section>
+
+        <script src="main.js"></script>
 
         <!-- Newsletter subscription -->
         <article class="email-subscription main-email-subscription">
@@ -231,5 +260,6 @@
         </a>
       </footer>
     </div>
+
   </body>
 </html>
