@@ -89,20 +89,24 @@ body {
     border-radius: 4px;
 }
 
-.button:hover,
-.button-brown:focus-visible {
+.button:not(.pagination-link):hover,
+.button:not(.pagination-link):focus {
     color: rgba(255, 255, 255, 0.6);
     outline: none;
 }
 
+.button:focus {
+    outline: none;
+}
+
 .button-brown:hover,
-.button-brown:focus-visible {
+.button-brown:focus {
     background-color: #615048;
     outline: none;
 }
 
 .button-blue:hover,
-.button-blue:focus-visible {
+.button-blue:focus {
     background-color: #68A2CA;
     outline: none;
 }
@@ -692,6 +696,16 @@ body {
     text-decoration: none;
 }
 
+.footer-telephone:hover,
+.footer-telephone:focus {
+    color: #756157;
+    outline: none;
+}
+
+.footer-telephone:active {
+    color: rgba(117, 97, 87, 0.3);
+}
+
 .footer-copyright {
     display: flex;
     align-items: center;
@@ -939,7 +953,7 @@ body {
     margin-left: auto;
 }
 
-.options-buttons-group li {
+.options-buttons__item {
     width: 48px;
     height: 48px;
 }
@@ -950,6 +964,15 @@ body {
     height: 48px;
     border: 3px solid #E5E5E5;
     box-sizing: border-box;
+}
+
+.option-buttons__item .button:hover,
+.option-buttons__item .button:active {
+    border-color: #000000;
+}
+
+.option-buttons__item .button:focus {
+    border-color: #68A2CA;
 }
 
 .option-buttons__item .current-button {
