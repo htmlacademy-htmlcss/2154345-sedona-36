@@ -54,7 +54,7 @@ body {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
 
 .button {
     cursor: pointer;
@@ -65,6 +65,7 @@ body {
     color: #000000;
     background-color: #ffffff;
     border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .button-brown {
@@ -76,6 +77,7 @@ body {
     color: #ffffff;
     background-color: #756157;
     border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .button-blue {
@@ -87,6 +89,7 @@ body {
     color: #ffffff;
     background-color: #82b3d3;
     border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .button:not(.pagination-link):hover,
@@ -220,13 +223,13 @@ body {
     padding: 22px 12px;
 }
 
-.clickable-links__item {
+.clickable-links__item:not(:last-child) {
     background: linear-gradient(#ffffff 50%, #F6F6F6 50%);
     background-size: 100% 200%;
     transition: background 0.4s;
 }
 
-.clickable-links__item:hover {
+.clickable-links__item:not(:last-child):hover {
     background-position: 100% 100%;
 }
 
@@ -683,6 +686,11 @@ body {
     line-height: 24px;
     border-width: 0;
     border-radius: 4px 0 0 4px;
+    transition: background-color 0.6s;
+}
+
+.newsletter-form .field:hover {
+    background-color: #e6e6e6;
 }
 
 .newsletter-form .field:focus {
@@ -1201,6 +1209,7 @@ body {
     background-color: #7DB54F;
     text-transform: uppercase;
     border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .card-favorites-selected-button:hover,
