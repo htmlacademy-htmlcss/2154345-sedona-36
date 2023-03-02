@@ -1,3 +1,5 @@
+// Попап
+
 const popup = document.getElementById('popup');
 const popupOpen = document.getElementById('popup-open');
 const popupClose = document.getElementById('popup-close');
