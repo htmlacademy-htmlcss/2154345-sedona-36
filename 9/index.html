@@ -171,22 +171,46 @@
                 <span class="popup-label-text">Дата выезда:</span>
                 <input type="date" class="popup-secont-date">
               </label>
-              <label class="popup-people-label">
-                <span class="popup-people-label-text">Взрослые:</span>
+              <div class="popup-people-container">
+                <label for="#adult-count" class="popup-adults-label-text">Взрослые:</label>
                 <div class="popup-people-count">
-                  <button class="math-mark popup-minus">-</button>
-                  <input type="text" class="people-count-field adult-input">
-                  <button class="math-mark popup-plus">+</button>
+                  <button class="math-mark popup-minus">
+                    <svg class="minus-svg" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
+                    </svg>
+                  </button>
+                  <input id="adult-count" type="text" class="people-count-field adult-input" value="0">
+                  <button class="math-mark popup-plus">
+                    <svg class="plus-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
+                    </svg>
+                  </button>
                 </div>
-              </label>
-              <label class="popup-people-label">
-                <span class="popup-people-label-text">Дети:</span>
+              </div>
+              <div class="popup-people-container">
+                <label for="#child-count" class="popup-children-label-text">Дети:</label>
+                <div class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">
+                    i
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-children">
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </div>
                 <div class="popup-people-count">
-                  <button class="math-mark popup-minus">-</button>
-                  <input type="text" class="people-count-field child-input">
-                  <button class="math-mark popup-plus">+</button>
+                  <button class="math-mark popup-minus">
+                    <svg class="minus-svg" width="14" height="2" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
+                    </svg>
+                  </button>
+                  <input id="child-count" type="text" class="people-count-field child-input" value="0">
+                  <button class="math-mark popup-plus">
+                    <svg class="plus-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
+                    </svg>
+                  </button>
                 </div>
-              </label>
+              </div>
               <button class="popup-find-button button-blue" type="submit" value="submit">Найти</button>
             </form>
           </div>

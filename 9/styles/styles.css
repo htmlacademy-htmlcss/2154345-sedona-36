@@ -201,6 +201,10 @@ body {
     background-position: 100% 100%;
 }
 
+.navigation-links__link:focus {
+    outline-offset: -1px;
+}
+
 .navigation-links__link-current {
     position: relative;
 }
@@ -221,6 +225,10 @@ body {
     min-width: 20px;
     min-height: 20px;
     padding: 22px 12px;
+}
+
+.clickable-links__link:focus {
+    outline-offset: -1px;
 }
 
 .clickable-links__item:not(:last-child) {
@@ -531,6 +539,8 @@ body {
     line-height: 24px;
     font-weight: 700;
     font-family: inherit;
+    border: none;
+    border-radius: 4px;
 }
 
 .popup-form input:focus {
@@ -594,22 +604,80 @@ body {
     padding: 12px 20px;
     width: 440px;
     background-color: #F2F2F2;
-    border: none;
     box-sizing: border-box;
 }
 
-.popup-people-label {
+.popup-people-container {
     grid-column: 2 span;
     display: flex;
     justify-content: space-between;
 }
 
-.popup-people-label:last-of-type {
+.popup-people-container:last-of-type {
     grid-column: 4 / -1;
+    position: relative;
 }
-.popup-people-label-text {
+.popup-children-label-text,
+.popup-adults-label-text {
     padding: 12px 0;
 }
+
+.tooltip-toggle {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-48%);
+    width: 26px;
+    height: 26px;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #83B3D3;
+    border: none;
+    border-radius: 50%;
+}
+
+.tooltip-text {
+    position: absolute;
+    top: 52px;
+    left: -50px;
+    display: none;
+    width: 256px;
+    padding: 15px 18px 18px 22px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: start;
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 10px;
+    box-sizing: border-box;
+    z-index: 5;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text::after {
+    position: absolute;
+    top: -9px;
+    left: 113px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #333333;
+}
+
+.popup-children-label-text::after {
+    position: absolute;
+    content:
+}
+
 .popup-people-count {
     display: flex;
     width: 110px;
@@ -619,13 +687,81 @@ body {
     border-radius: 4px;
 }
 
-.math-mark {
-    width: 40px;
-    font-size: 40px;
+.people-count-field {
+    text-align: center;
 }
 
-.people-count-field {
+.math-mark {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    font-size: 40px;
+    color: #756157;
+    background-color: #F2F2F2;
+    border: none;
+}
+
+.math-mark path {
+    transition: all 0.3s;
+}
+
+.popup-minus {
+    border-radius: 4px 0 0 4px;
+}
+
+.popup-minus:hover .minus-svg path{
+    fill: #000000;
+    fill-opacity: 1;
+}
+
+.popup-plus {
+    border-radius: 0 4px 4px 0;
+}
+
+.popup-plus:hover .plus-svg path{
+    fill: #000000;
+    fill-opacity: 1;
+}
+/*
+.math-mark:hover path {
+
+} */
+
+/* .popup-minus::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 13px;
+    background-color: #CDC7C4;
+} */
+
+/* .popup-plus::before,
+.popup-plus::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 13px;
+    background-color: #CDC7C4;
+} */
+
+.popup-plus::after {
+    width: 2px;
+    height: 14px;
+    left: 19px;
+}
+
+.popup-people-count .people-count-field {
     width: 31px;
+    background-color: #F2F2F2;
+    border-radius: 0;
 }
 
 .popup-find-button {
@@ -847,10 +983,17 @@ body {
     height: 100%;
     font-size: 16px;
     line-height: 21px;
+    color: inherit;
+    text-decoration: none;
 }
 
 .breadcrumbs-item:not(:last-child) {
     position: relative;
+    margin-right: 28.5px;
+}
+
+.breadcrumbs-item:last-child .breadcrumbs-link {
+    cursor: default;
 }
 
 .breadcrumbs-item:first-child a {
@@ -868,10 +1011,6 @@ body {
     height: 21px;
     background: url("../images/toright-arrow.svg") no-repeat;
     background-position: 50% 50%;
-}
-
-.breadcrumbs-item:not(:last-child) {
-    margin-right: 28.5px;
 }
 
 /* Фильтры */
@@ -912,20 +1051,85 @@ body {
     line-height: 24px;
 }
 
-.catalog-filter-list label {
-    display: block;
-}
-
 .control {
+    position: relative;
+    cursor: pointer;
     display: block;
     margin: 0;
     padding: 0;
+    padding-left: 36px;
     font-size: 18px;
     line-height: 23px;
 }
 
+.control-mark {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.control:hover {
+    opacity: 0.7;
+}
+
+.control input:focus + .control-mark {
+    outline: 3px solid #83B3D3;
+}
+
+.control:active {
+    opacity: 0.4;
+}
+
+.control-checkbox:checked + .control-mark::before {
+    position: absolute;
+    top: 11.8px;
+    left: 4.4px;
+    width: 5.5px;
+    height: 1.5px;
+    background-color: #3F5E72;
+    content: "";
+    transform: rotate(50deg) skewX(10deg);
+}
+
+.control-checkbox:checked + .control-mark::after {
+    position: absolute;
+    top: 10px;
+    left: 6.8px;
+    width: 10px;
+    height: 1.5px;
+    background-color: #3F5E72;
+    content: "";
+    transform: rotate(-50deg) skewX(-8deg);
+  }
+
+.control-checkbox:disabled + .control-mark,
+.control-radio:disabled + .control-mark {
+    opacity: 0.3;
+}
+
 .catalog-filter-item:not(:nth-of-type(3)) .control {
     margin-bottom: 16px;
+}
+
+.control-radio + .control-mark {
+    border-radius: 50%;
+}
+
+.control-radio:checked +.control-mark::before {
+    position: absolute;
+    top: 5px;
+    left: 4.6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3F5E72;
+    content: "";
 }
 
 /* Секция цены */
@@ -1161,7 +1365,7 @@ body {
     display: inline-block;
     width: 48px;
     height: 48px;
-    border: 3px solid #E5E5E5;
+    border: 2px solid #E5E5E5;
     box-sizing: border-box;
 }
 
