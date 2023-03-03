@@ -589,8 +589,23 @@ body {
 
 .popup-date-label {
     grid-column: 1 / -1;
+    position: relative;
     display: flex;
     justify-content: space-between;
+}
+
+input[class*="date"] {
+    background: url('../images/popup-calendar.svg') no-repeat;
+    background-position: calc(100% - 20px) 50%;
+}
+
+.date-state {
+    position: absolute;
+    top: 52px;
+    left: 157px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
 }
 
 .popup-label-text {
@@ -609,14 +624,32 @@ body {
 
 .popup-people-container {
     grid-column: 2 span;
+    position: relative;
     display: flex;
     justify-content: space-between;
+}
+
+.count-state {
+    display: none;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    top: 55px;
+    right: -4px;
+    color: #FF5757;
+    opacity: 0.7;
+}
+
+.active-alert {
+    display: block;
 }
 
 .popup-people-container:last-of-type {
     grid-column: 4 / -1;
     position: relative;
 }
+
 .popup-children-label-text,
 .popup-adults-label-text {
     padding: 12px 0;
@@ -687,10 +720,6 @@ body {
     border-radius: 4px;
 }
 
-.people-count-field {
-    text-align: center;
-}
-
 .math-mark {
     position: relative;
     display: flex;
@@ -724,33 +753,6 @@ body {
     fill: #000000;
     fill-opacity: 1;
 }
-/*
-.math-mark:hover path {
-
-} */
-
-/* .popup-minus::before {
-    position: absolute;
-    content: "";
-    width: 14px;
-    height: 2px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 13px;
-    background-color: #CDC7C4;
-} */
-
-/* .popup-plus::before,
-.popup-plus::after {
-    position: absolute;
-    content: "";
-    width: 14px;
-    height: 2px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 13px;
-    background-color: #CDC7C4;
-} */
 
 .popup-plus::after {
     width: 2px;
@@ -760,8 +762,15 @@ body {
 
 .popup-people-count .people-count-field {
     width: 31px;
+    text-align: center;
     background-color: #F2F2F2;
     border-radius: 0;
+}
+
+.people-count-field::-webkit-inner-spin-button,
+.people-count-field::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .popup-find-button {
@@ -1088,25 +1097,13 @@ body {
 
 .control-checkbox:checked + .control-mark::before {
     position: absolute;
-    top: 11.8px;
-    left: 4.4px;
-    width: 5.5px;
-    height: 1.5px;
-    background-color: #3F5E72;
+    top: 5px;
+    left: 4px;
     content: "";
-    transform: rotate(50deg) skewX(10deg);
+    width: 12.2px;
+    height: 10px;
+    background: url("../images/check-mark.svg") no-repeat;
 }
-
-.control-checkbox:checked + .control-mark::after {
-    position: absolute;
-    top: 10px;
-    left: 6.8px;
-    width: 10px;
-    height: 1.5px;
-    background-color: #3F5E72;
-    content: "";
-    transform: rotate(-50deg) skewX(-8deg);
-  }
 
 .control-checkbox:disabled + .control-mark,
 .control-radio:disabled + .control-mark {
