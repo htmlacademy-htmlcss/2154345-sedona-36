@@ -604,6 +604,7 @@ input[class*="date"] {
     top: 52px;
     left: 157px;
     font-size: 16px;
+    font-weight: 400;
     line-height: 21px;
 }
 
@@ -623,14 +624,32 @@ input[class*="date"] {
 
 .popup-people-container {
     grid-column: 2 span;
+    position: relative;
     display: flex;
     justify-content: space-between;
+}
+
+.count-state {
+    display: none;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    top: 55px;
+    right: -4px;
+    color: #FF5757;
+    opacity: 0.7;
+}
+
+.active-alert {
+    display: block;
 }
 
 .popup-people-container:last-of-type {
     grid-column: 4 / -1;
     position: relative;
 }
+
 .popup-children-label-text,
 .popup-adults-label-text {
     padding: 12px 0;
