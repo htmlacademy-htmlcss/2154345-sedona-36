@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link type="image/x-icon" href="images/favicon.png" rel="shortcut icon">
+    <link type="Image/x-icon" href="images/favicon.png" rel="icon">
   </head>
   <body>
     <div class="page-container">
@@ -38,13 +40,23 @@
             <ul class="navigation-clickable-links">
               <li class="clickable-links__item">
                 <a href="#" class="clickable-links__link">
-                  <span class="visually-hidden">Поиск</span>
+                  <span class="visually-hidden">Поиск.</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" width="19" height="19" fill="currentColor">
+                    <path d="m18.5 17-3.7-3.7a8 8 0 0 0 1.7-4.8 8 8 0 1 0-3.1 6.3l3.7
+                    3.7 1.4-1.5Zm-10-2.5a6 6 0 0 1-6-6 6 6 0 0 1 12 0 6 6 0 0 1-6 6Z"/>
+                  </svg>
                 </a>
               </li>
               <li class="clickable-links__item">
                 <a href="#" class="clickable-links__link">
-                  <span class="visually-hidden">Избранные</span>
-                  <span class="nav__favorites-count">12</span>
+                    <span class="visually-hidden">Избранные</span>
+                    <span id="favCount" class="nav__favorites-count">11</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17" width="18" height="17" fill="currentColor">
+                        <path d="M8.9 17a1 1 0 0 1-.8-.4l-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0
+                        8 .5 9 1.3a5.5 5.5 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5L9
+                        14.4l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3
+                        0-.6-.2-.8-.4a3.7 3.7 0 0 0-2.7-1.3 3.3 3.3 0 0 0-3.3 3.3c-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/>
+                    </svg>
                 </a>
               </li>
               <li class="clickable-links__item">
@@ -62,7 +74,7 @@
         <section class="main-hero">
           <h1 class="visually-hidden">Городок Седона.</h1>
           <!-- display: block  -->
-          <img class="welcome-image" src="images/welcome.svg" alt="Добро пожаловать в Седону." width="456.7" height="351.37">
+          <img class="welcome-image" src="images/index-header/welcome.svg" alt="Добро пожаловать в Седону." width="456.7" height="351.37">
           <div class="hero-Nikitas-triangles">
           </div>
         </section>
@@ -159,34 +171,62 @@
         <!-- Popup :) -->
         <section id="popup" class="hotel-search-popup">
           <div class="popup-container">
-            <form action="" class="popup-form">
+            <form class="popup-form" action="https://echo.htmlacademy.ru/" method="get">
               <button id="popup-close" class="popup-close">&#10006</button>
               <h2 class="popup-title">Поиск гостиницы в Седоне</h2>
               <label class="popup-date-label">
                 <span class="popup-label-text">Дата заезда:</span>
-                <input type="date" class="popup-first-date">
+                <input type="text" id="firstDate" class="popup-first-date" placeholder="27 апреля 2023" name="arrive-date">
+                <span class="date-state" id="firstDateState"></span>
               </label>
               <label class="popup-date-label">
                 <span class="popup-label-text">Дата выезда:</span>
-                <input type="date" class="popup-secont-date">
+                <input type="text" id="secondDate" class="popup-second-date" placeholder="1 сентября 2023" name="departure-date">
+                <span class="date-state" id="secondDateState"></span>
               </label>
-              <label class="popup-people-label">
-                <span class="popup-people-label-text">Взрослые:</span>
+              <div class="popup-people-container">
+                <label for="#adult-count" class="popup-adults-label-text">Взрослые:</label>
                 <div class="popup-people-count">
-                  <button class="math-mark popup-minus">-</button>
-                  <input type="text" class="people-count-field adult-input">
-                  <button class="math-mark popup-plus">+</button>
+                  <button id="adult-minus" class="math-mark popup-minus" type="button">
+                    <svg class="minus-svg" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
+                    </svg>
+                  </button>
+                  <input id="adult-count" type="number" class="people-count-field adult-input" value="2" min="0" max="10" name="adult-count">
+                  <button id="adult-plus" class="math-mark popup-plus" type="button">
+                    <svg class="plus-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
+                    </svg>
+                  </button>
                 </div>
-              </label>
-              <label class="popup-people-label">
-                <span class="popup-people-label-text">Дети:</span>
+                <span id="adult-count-state" class="count-state">Лимит достигнут.</span>
+              </div>
+              <div class="popup-people-container">
+                <label for="#child-count" class="popup-children-label-text">Дети:</label>
+                <div class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">
+                    i
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-children">
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </div>
                 <div class="popup-people-count">
-                  <button class="math-mark popup-minus">-</button>
-                  <input type="text" class="people-count-field child-input">
-                  <button class="math-mark popup-plus">+</button>
+                  <button id="child-minus" class="math-mark popup-minus" type="button">
+                    <svg class="minus-svg" width="14" height="2" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
+                    </svg>
+                  </button>
+                  <input id="child-count" type="number" class="people-count-field child-input" value="2" min="0" max="10" name="child-count">
+                  <button id="child-plus" class="math-mark popup-plus" type="button">
+                    <svg class="plus-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
+                    </svg>
+                  </button>
                 </div>
-              </label>
-              <button class="popup-find-button button-blue" type="submit" value="submit">Найти</button>
+                <span id="child-count-state" class="count-state">Лимит достигнут.</span>
+              </div>
+              <button class="popup-find-button button-blue" id="popup-submit-botton" type="submit" value="submit">Найти</button>
             </form>
           </div>
         </section>

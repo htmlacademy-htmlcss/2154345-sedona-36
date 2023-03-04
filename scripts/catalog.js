@@ -77,10 +77,10 @@ function controlToSlider(fromSlider, toSlider, toInput) {
 }
 
 
-const fromSlider = document.querySelector('#range-scale__from');
-const toSlider = document.querySelector('#range-scale__to');
-const fromInput = document.querySelector('from-price');
-const toInput = document.querySelector('to-price');
+const fromSlider = document.getElementById('range-scale__from');
+const toSlider = document.getElementById('range-scale__to');
+const fromInput = document.getElementById('from-price');
+const toInput = document.getElementById('to-price');
 fillSlider(fromSlider, toSlider, "#5E676C", "#ffffff", toSlider);
 setToggleAccessible(toSlider);
 
@@ -88,3 +88,35 @@ fromSlider.oninput = () => controlfFromSlider(fromSlider, toSlider, fromInput);
 toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
 fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
 toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+
+
+
+// Добавление в избранное
+
+const buttons = document.querySelectorAll(".cardButton");
+let favoritesCount = document.getElementById("favCount");
+let currentCount = localStorage.getItem("currentCount") || 11;
+localStorage.setItem("currentCount", currentCount);
+favoritesCount.textContent = currentCount;
+
+buttons.forEach(elem => {
+    elem.addEventListener("click", () => {
+        currentCount = localStorage.getItem("currentCount");
+        if (elem.textContent == "В избранное") {
+            elem.textContent = "В избранном";
+            currentCount++;
+            favoritesCount.textContent = currentCount;
+            localStorage.setItem( "currentCount" , currentCount.toString());
+        } else {
+            elem.textContent = "В избранное";
+            currentCount--;
+            favoritesCount.textContent = currentCount;
+            localStorage.setItem( "currentCount" , currentCount.toString());
+        }
+        elem.classList.toggle("button-blue");
+        elem.classList.toggle("card-favorites-selected-button");
+        localStorage.setItem(elem, elem.textContent);
+        console.log(localStorage.getItem(elem));
+        console.log(currentCount);
+    })
+});
