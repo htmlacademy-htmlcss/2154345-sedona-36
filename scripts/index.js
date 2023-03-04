@@ -1,3 +1,8 @@
+const  currentCount = localStorage.getItem("currentCount");
+
+const favCount = document.getElementById("favCount");
+favCount.textContent = currentCount;
+
 // Попап
 
 const popup = document.getElementById('popup');
