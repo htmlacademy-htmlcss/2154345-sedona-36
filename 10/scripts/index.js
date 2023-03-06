@@ -6,10 +6,16 @@ favCount.textContent = currentCount;
 // Попап
 
 const popup = document.getElementById('popup');
-const popupOpen = document.getElementById('popup-open');
+const headerOpenButton = document.getElementById('header-popup-open');
+const formOpenButton = document.getElementById('popup-open');
 const popupClose = document.getElementById('popup-close');
 
-popupOpen.addEventListener('click', function(e){
+headerOpenButton.addEventListener('click', function(e){
+    e.preventDefault();
+    popup.classList.toggle('active');
+})
+
+formOpenButton.addEventListener('click', function(e){
     e.preventDefault();
     popup.classList.add('active');
 })
