@@ -1214,6 +1214,15 @@ input[class*="date"] {
     box-sizing: border-box;
 }
 
+.range-wrapper-inputs input:hover {
+    opacity: 0.9;
+}
+
+.range-wrapper-inputs input:focus {
+    outline: 3px solid #83B3D3;
+    z-index: 3;
+}
+
 .range-wrapper-inputs input[type="number"]::-webkit-inner-spin-button,
 .range-wrapper-inputs input[type="number"]::-webkit-outer-spin-button {
     appearance: none;
