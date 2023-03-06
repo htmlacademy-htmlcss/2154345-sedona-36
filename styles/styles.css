@@ -1297,7 +1297,7 @@ input[class*="date"] {
 /* Кнопки фильтра */
 
 .catalog-filter-buttons-group {
-    margin-top: auto;
+    margin-top: 56px;
 }
 
 .catalog-filter-buttons-group button {
