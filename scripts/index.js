@@ -139,23 +139,6 @@ function checkLimit(countField, mark) {
         return (count + 1 < 11);
     }
 }
-// const counterFields = [adultCount, childCount];
-// const mathMarksButtons = [[adultMinus, adultPlus], [childMinus, childPlus]];
-
-// counterFields.forEach(fieldelem => {
-//     mathMarksButtons.forEach(markgroup => {
-//         markgroup.forEach(markelem => {
-//             markelem.addEventListener("click", () => {
-//                 // console.log(String(markelem.id).slice(-4,));
-//                 if (String(markelem.id).slice(-4,) === "plus") {
-//                     fieldelem.value++;
-//                 } else {
-//                     fieldelem.value--;
-//                 }
-//             });
-//         });
-//     });
-// });
 
 
 adultMinus.addEventListener("click", () => {
