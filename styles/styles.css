@@ -169,19 +169,21 @@ body {
 
 .navigation ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
+    max-width: 600px;
     margin: 0;
     padding: 0;
 }
 
 .navigation a {
+    display: block;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
 }
 
 .navigation-links__link {
-    display: inline-block;
     padding: 20px 16px;
     font-size: 20px;
     font-weight: 700;
@@ -1355,6 +1357,7 @@ input[class*="date"] {
     appearance: none;
     width: 292px;
     margin-left: 200px;
+    margin-right: 10px;
     padding: 11px 20px;
     padding-right: 40px;
     font-family: inherit;
