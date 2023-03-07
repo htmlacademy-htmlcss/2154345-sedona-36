@@ -91,16 +91,31 @@ toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
 
 
 
-// Добавление в избранное
+// Adding to favorites
 
 const buttons = document.querySelectorAll(".cardButton");
 let favoritesCount = document.getElementById("favCount");
-let currentCount = localStorage.getItem("currentCount") || 11;
+let currentCount = localStorage.getItem("currentCount") || 12;
 localStorage.setItem("currentCount", currentCount);
 favoritesCount.textContent = currentCount;
+let currItem;
+
 
 buttons.forEach(elem => {
+    // Сheck the current state of the element
+    currItem = localStorage.getItem(elem.id);
+    if (currItem && (elem.classList[1] != currItem)) {
+        if (currItem == "button-blue") {
+            elem.textContent = "В избранное";
+        } else {
+            elem.textContent = "В избранном";
+        }
+        elem.className = elem.classList[0] + ' ' + currItem;
+    }
+
+    // EventListener of class changing
     elem.addEventListener("click", () => {
+        // Get the counter
         currentCount = localStorage.getItem("currentCount");
         if (elem.textContent == "В избранное") {
             elem.textContent = "В избранном";
@@ -113,10 +128,13 @@ buttons.forEach(elem => {
             favoritesCount.textContent = currentCount;
             localStorage.setItem( "currentCount" , currentCount.toString());
         }
+        // class change and memorization
         elem.classList.toggle("button-blue");
         elem.classList.toggle("card-favorites-selected-button");
         localStorage.setItem(elem, elem.textContent);
-        console.log(localStorage.getItem(elem));
-        console.log(currentCount);
-    })
+        localStorage.setItem(elem.id, elem.classList[1])
+    });
+
+    // localStorage data update
+    localStorage.setItem(elem.id, elem.classList[1]);
 });
