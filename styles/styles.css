@@ -272,6 +272,7 @@ body {
     color: #ffffff;
     background-color: #7DB54F;
     border-radius: 20px;
+    box-sizing: border-box;
 }
 
 .clickable-links__item:nth-child(2) a {
@@ -747,17 +748,17 @@ input[class*="date"] {
 }
 
 .math-mark path {
-    transition: all 0.3s;
+    transition: all 0.1s;
 }
 
 .math-mark:focus {
     outline: none;
 }
 
-.math-mark:focus svg {
+.math-mark:focus-visible svg {
     border-radius: 4px;
     outline: 3px solid #82B3D3;
-    outline-offset: 2px;
+    outline-offset: 3px;
 }
 
 .popup-minus {

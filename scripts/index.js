@@ -81,9 +81,9 @@ function getAvailability(dateInput) {
     } catch {
         return "invalid"
     }
-  }
+}
 
-  function createMessage(answer) {
+function createMessage(answer) {
     let message;
 
     if (answer == "success") {
@@ -97,16 +97,24 @@ function getAvailability(dateInput) {
     }
 
     return message;
-  }
+}
 
 
-  const firstDate = document.getElementById("firstDate");
-  const secondDate = document.getElementById("secondDate");
-  const firstDateState = document.getElementById("firstDateState");
-  const secondDateState = document.getElementById("secondDateState");
+const firstDate = document.getElementById("firstDate");
+const secondDate = document.getElementById("secondDate");
+const firstDateState = document.getElementById("firstDateState");
+const secondDateState = document.getElementById("secondDateState");
 
 
-  firstDate.addEventListener("change", () => {
+startFirstDateMessage = createMessage(getAvailability(firstDate.value));
+firstDateState.textContent = startFirstDateMessage[0];
+firstDateState.style.color = startFirstDateMessage[1];
+
+startSecondDateMessage = createMessage(getAvailability(secondDate.value));
+secondDateState.textContent = startSecondDateMessage[0];
+secondDateState.style.color = startSecondDateMessage[1];
+
+firstDate.addEventListener("change", () => {
     const firstDateMessage = createMessage(getAvailability(firstDate.value));
     // ОТЛАДКА
     // console.log("firstDate.value --> " + firstDate.value);
@@ -114,14 +122,14 @@ function getAvailability(dateInput) {
     // console.log("firstDateMessage --> " + firstDateMessage);
     firstDateState.textContent = firstDateMessage[0];
     firstDateState.style.color = firstDateMessage[1];
-  });
+});
 
 
-  secondDate.addEventListener("change", () => {
+secondDate.addEventListener("change", () => {
     const secondDateMessage = createMessage(getAvailability(secondDate.value));
     secondDateState.textContent = secondDateMessage[0];
     secondDateState.style.color = secondDateMessage[1];
-  });
+});
 
 
 // Счетчик посетителей
