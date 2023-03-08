@@ -258,11 +258,12 @@ body {
 
 .nav__favorites-count {
     position: absolute;
-    display: flex;
-    width: 20px;
-    height: 20px;
     left: 20px;
     top: 11px;
+    display: flex;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 3px;
     font-size: 10px;
     font-weight: 400;
     line-height: 10px;
@@ -270,7 +271,8 @@ body {
     justify-content: center;
     color: #ffffff;
     background-color: #7DB54F;
-    border-radius: 50%;
+    border-radius: 20px;
+    box-sizing: border-box;
 }
 
 .clickable-links__item:nth-child(2) a {
@@ -288,7 +290,6 @@ body {
     background: url("../images/index-header/index-header-bg.jpg") no-repeat;
     /* background-size: cover; */
     background-color: #000000;
-    object-fit: cover;
 }
 
 .main-hero::after {
@@ -607,6 +608,15 @@ body {
     justify-content: space-between;
 }
 
+.popup-date-label:hover input {
+    color: rgba(0, 0, 0, .7);
+    background-color: #E6E6E6;
+}
+
+.popup-date-label input:focus {
+    outline: 3px solid #83B3D3;
+}
+
 input[class*="date"] {
     background: url('../images/popup/popup-calendar.svg') no-repeat;
     background-position: calc(100% - 20px) 50%;
@@ -747,17 +757,17 @@ input[class*="date"] {
 }
 
 .math-mark path {
-    transition: all 0.3s;
+    transition: all 0.1s;
 }
 
 .math-mark:focus {
     outline: none;
 }
 
-.math-mark:focus svg {
+.math-mark:focus-visible svg {
     border-radius: 4px;
     outline: 3px solid #82B3D3;
-    outline-offset: 2px;
+    outline-offset: 3px;
 }
 
 .popup-minus {
@@ -829,8 +839,7 @@ input[class*="date"] {
     color: #ffffff;
     background-color: #000000;
     background: url("../images/blur-photos/newsletter-bg.jpg") no-repeat;
-    background-size: auto;
-    object-fit: cover;
+    background-size: cover;
 }
 
 .inner-email-subscription .field {
@@ -899,8 +908,6 @@ input[class*="date"] {
     display: block;
 }
 
-
-
 .social-svg:hover path {
     fill: #68A2CA;
 }
@@ -943,7 +950,7 @@ input[class*="date"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 720px;
+    max-width: 450px;
     height: 50px;
     font-size: 40px;
     line-height: 40px;
@@ -1367,8 +1374,7 @@ input[class*="date"] {
     width: 292px;
     margin-left: 200px;
     margin-right: 10px;
-    padding: 11px 20px;
-    padding-right: 40px;
+    padding: 11px 40px 11px 20px;
     font-family: inherit;
     font-size: 18px;
     line-height: 21px;
