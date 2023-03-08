@@ -608,6 +608,15 @@ body {
     justify-content: space-between;
 }
 
+.popup-date-label:hover input {
+    color: rgba(0, 0, 0, .7);
+    background-color: #E6E6E6;
+}
+
+.popup-date-label input:focus {
+    outline: 3px solid #83B3D3;
+}
+
 input[class*="date"] {
     background: url('../images/popup/popup-calendar.svg') no-repeat;
     background-position: calc(100% - 20px) 50%;
@@ -899,8 +908,6 @@ input[class*="date"] {
     display: block;
 }
 
-
-
 .social-svg:hover path {
     fill: #68A2CA;
 }
@@ -943,7 +950,7 @@ input[class*="date"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 720px;
+    max-width: 450px;
     height: 50px;
     font-size: 40px;
     line-height: 40px;
