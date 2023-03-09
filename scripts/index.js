@@ -7,14 +7,14 @@ console.log(popupSubmit);
 
 // Проверка заполнения формы
 
-function checkDispatchAvailability() {
-    if ((getAvailability(firstDate.value) && getAvailability(secondDate.value)) &&
-    (childCount.value + adultCount.value != 0 && adultCount > 0)) {
-        popupSubmit.disabled = false;
-    } else {
-        popupSubmit.disabled = true;
-    }
-}
+// function checkDispatchAvailability() {
+//     if ((getAvailability(firstDate.value) && getAvailability(secondDate.value)) &&
+//     (childCount.value + adultCount.value != 0 && adultCount > 0)) {
+//         popupSubmit.disabled = false;
+//     } else {
+//         popupSubmit.disabled = true;
+//     }
+// }
 
 // Попап
 
