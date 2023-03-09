@@ -2,14 +2,33 @@ const  currentCount = localStorage.getItem("currentCount");
 
 const favCount = document.getElementById("favCount");
 favCount.textContent = currentCount;
+const popupSubmit = document.getElementById("popup-submit-botton");
+console.log(popupSubmit);
+
+// Проверка заполнения формы
+
+function checkDispatchAvailability() {
+    if ((getAvailability(firstDate.value) && getAvailability(secondDate.value)) &&
+    (childCount.value + adultCount.value != 0 && adultCount > 0)) {
+        popupSubmit.disabled = false;
+    } else {
+        popupSubmit.disabled = true;
+    }
+}
 
 // Попап
 
 const popup = document.getElementById('popup');
-const popupOpen = document.getElementById('popup-open');
+const headerOpenButton = document.getElementById('header-popup-open');
+const formOpenButton = document.getElementById('popup-open');
 const popupClose = document.getElementById('popup-close');
 
-popupOpen.addEventListener('click', function(e){
+headerOpenButton.addEventListener('click', function(e){
+    e.preventDefault();
+    popup.classList.toggle('active');
+})
+
+formOpenButton.addEventListener('click', function(e){
     e.preventDefault();
     popup.classList.add('active');
 })
@@ -75,9 +94,9 @@ function getAvailability(dateInput) {
     } catch {
         return "invalid"
     }
-  }
+}
 
-  function createMessage(answer) {
+function createMessage(answer) {
     let message;
 
     if (answer == "success") {
@@ -91,16 +110,24 @@ function getAvailability(dateInput) {
     }
 
     return message;
-  }
+}
 
 
-  const firstDate = document.getElementById("firstDate");
-  const secondDate = document.getElementById("secondDate");
-  const firstDateState = document.getElementById("firstDateState");
-  const secondDateState = document.getElementById("secondDateState");
+const firstDate = document.getElementById("firstDate");
+const secondDate = document.getElementById("secondDate");
+const firstDateState = document.getElementById("firstDateState");
+const secondDateState = document.getElementById("secondDateState");
 
 
-  firstDate.addEventListener("change", () => {
+startFirstDateMessage = createMessage(getAvailability(firstDate.value));
+firstDateState.textContent = startFirstDateMessage[0];
+firstDateState.style.color = startFirstDateMessage[1];
+
+startSecondDateMessage = createMessage(getAvailability(secondDate.value));
+secondDateState.textContent = startSecondDateMessage[0];
+secondDateState.style.color = startSecondDateMessage[1];
+
+firstDate.addEventListener("change", () => {
     const firstDateMessage = createMessage(getAvailability(firstDate.value));
     // ОТЛАДКА
     // console.log("firstDate.value --> " + firstDate.value);
@@ -108,14 +135,16 @@ function getAvailability(dateInput) {
     // console.log("firstDateMessage --> " + firstDateMessage);
     firstDateState.textContent = firstDateMessage[0];
     firstDateState.style.color = firstDateMessage[1];
-  });
+    checkDispatchAvailability();
+});
 
 
-  secondDate.addEventListener("change", () => {
+secondDate.addEventListener("change", () => {
     const secondDateMessage = createMessage(getAvailability(secondDate.value));
     secondDateState.textContent = secondDateMessage[0];
     secondDateState.style.color = secondDateMessage[1];
-  });
+    checkDispatchAvailability()
+});
 
 
 // Счетчик посетителей
@@ -139,30 +168,14 @@ function checkLimit(countField, mark) {
         return (count + 1 < 11);
     }
 }
-// const counterFields = [adultCount, childCount];
-// const mathMarksButtons = [[adultMinus, adultPlus], [childMinus, childPlus]];
-
-// counterFields.forEach(fieldelem => {
-//     mathMarksButtons.forEach(markgroup => {
-//         markgroup.forEach(markelem => {
-//             markelem.addEventListener("click", () => {
-//                 // console.log(String(markelem.id).slice(-4,));
-//                 if (String(markelem.id).slice(-4,) === "plus") {
-//                     fieldelem.value++;
-//                 } else {
-//                     fieldelem.value--;
-//                 }
-//             });
-//         });
-//     });
-// });
 
 
 adultMinus.addEventListener("click", () => {
     if (checkLimit(adultCount, 'minus')) {
         adultCount.value--;
         adultPlusLimit.classList.remove("active-alert");
-    }
+    };
+    checkDispatchAvailability()
 });
 
 adultPlus.addEventListener("click", () => {
@@ -170,14 +183,16 @@ adultPlus.addEventListener("click", () => {
         adultCount.value++;
     } else {
         adultPlusLimit.classList.add("active-alert");
-    }
+    };
+    checkDispatchAvailability()
 });
 
 childMinus.addEventListener("click", () => {
     if (checkLimit(childCount, 'minus')) {
         childCount.value--;
         childPlusLimit.classList.remove("active-alert");
-    }
+    };
+    checkDispatchAvailability()
 });
 
 childPlus.addEventListener("click", () => {
@@ -185,5 +200,6 @@ childPlus.addEventListener("click", () => {
         childCount.value++;
     } else {
         childPlusLimit.classList.add("active-alert");
-    }
+    };
+    checkDispatchAvailability()
 });
