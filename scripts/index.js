@@ -1,4 +1,4 @@
-const  currentCount = localStorage.getItem("currentCount");
+const  currentCount = localStorage.getItem("currentCount") || 12;
 
 const favCount = document.getElementById("favCount");
 favCount.textContent = currentCount;

@@ -956,7 +956,7 @@ input[class*="date"] {
     align-items: center;
     justify-content: center;
     max-width: 450px;
-    height: 50px;
+    min-height: 50px;
     font-size: 40px;
     line-height: 40px;
     color: #000000;
@@ -1356,7 +1356,6 @@ input[class*="date"] {
 
 .search-results-options {
     display: flex;
-    height: 49px;
     margin-bottom: 40px;
     align-items: center;
 }
@@ -1407,17 +1406,12 @@ input[class*="date"] {
     margin-left: auto;
 }
 
-.option-buttons__item {
-    width: 48px;
-    height: 48px;
-}
-
 .option-buttons__item:not(:last-child) {
     margin-right: 8px;
 }
 
 .option-buttons__item .button {
-    display: inline-block;
+    display: block;
     width: 48px;
     height: 48px;
     border: 2px solid #E5E5E5;
@@ -1610,6 +1604,7 @@ input[class*="date"] {
 
 .pagination {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
