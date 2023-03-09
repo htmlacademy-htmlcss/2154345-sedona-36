@@ -171,12 +171,14 @@
                 <label for="adult-count" class="popup-adults-label-text">Взрослые:</label>
                 <div class="popup-people-count">
                   <button id="adult-minus" class="math-mark popup-minus" type="button">
+                    <span class="visually-hidden">На одного взрослого меньше</span>
                     <svg class="minus-svg" width="14" height="14" viewBox="0 0 14 2" fill="#756157" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 0L0 2L14 2V0L0 0Z" fill-opacity="0.3"/>
                     </svg>
                   </button>
                   <input id="adult-count" type="number" class="people-count-field adult-input" value="2" min="0" max="10" name="adult-count">
                   <button id="adult-plus" class="math-mark popup-plus" type="button">
+                    <span class="visually-hidden">На одного взрослого больше</span>
                     <svg class="plus-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
                     </svg>
@@ -188,6 +190,7 @@
                 <label for="child-count" class="popup-children-label-text">Дети:</label>
                 <div class="tooltip">
                   <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">
+                    <span class="visually-hidden">Дополнительная информация по количеству детей</span>
                     i
                   </button>
                   <span class="tooltip-text" role="tooltip" id="tooltip-label-children">
@@ -196,12 +199,14 @@
                 </div>
                 <div class="popup-people-count">
                   <button id="child-minus" class="math-mark popup-minus" type="button">
+                    <span class="visually-hidden">На одного ребенка меньше</span>
                     <svg class="minus-svg" width="14" height="14" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
                     </svg>
                   </button>
                   <input id="child-count" type="number" class="people-count-field child-input" value="2" min="0" max="10" name="child-count">
                   <button id="child-plus" class="math-mark popup-plus" type="button">
+                    <span class="visually-hidden">На одного ребенка больше</span>
                     <svg class="plus-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
                     </svg>
@@ -223,7 +228,8 @@
             Только полезная информация и никакого спама, честное бойскаутское!
           </p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input type="email" class="field" placeholder="Ваш e-mail" name="newsletter-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            <label for="newsletter-input" class="visually-hidden">Ваш email</label>
+            <input type="email" id="newsletter-input" class="field" placeholder="Ваш e-mail" name="user-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
             <button class="button-blue newsletter-button" type="submit">Подписаться</button>
           </form>
         </article>

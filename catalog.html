@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <title>HTML Academy: Седона, Каталог</title>
         <link rel="stylesheet" href="styles/styles.css">
-        <link type="image/x-icon" href="images/favicon.png" rel="shortcut icon">
-        <link type="Image/x-icon" href="images/favicon.png" rel="icon">
+        <link rel="icon" href="favicon.ico">
+        <link rel="icon" type="image/png" href="images/favicon.png">
     </head>
     <body>
         <div class="page-container">
@@ -317,7 +317,8 @@
                         Только полезная информация и никакого спама, честное бойскаутское!
                     </p>
                     <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-                        <input type="email" class="field" placeholder="Ваш e-mail" name="newsletter-email" required>
+                        <label for="newsletter-input" class="visually-hidden">Ваш email</label>
+                        <input type="email" id="newsletter-input" class="field" placeholder="Ваш e-mail" name="user-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                         <button class="button-blue newsletter-button" type="submit">Подписаться</button>
                     </form>
                 </article>
