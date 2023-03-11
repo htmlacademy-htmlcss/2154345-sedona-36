@@ -8,8 +8,8 @@ console.log(popupSubmit);
 // Проверка заполнения формы
 
 // function checkDispatchAvailability() {
-//     if ((getAvailability(firstDate.value) && getAvailability(secondDate.value)) &&
-//     (childCount.value + adultCount.value != 0 && adultCount > 0)) {
+//     if ((getAvailability(firstDate.value) == "success") && (getAvailability(secondDate.value) == "success") &&
+//         (childCount.value != 0) && (adultCount.value != 0) && (adultCount > 0)) {
 //         popupSubmit.disabled = false;
 //     } else {
 //         popupSubmit.disabled = true;
